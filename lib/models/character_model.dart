@@ -6,7 +6,7 @@ class Character extends StatelessWidget {
   final String name;
   final String? shortName;
   final int level;
-  late final String imgurl;
+  late final String _imgurl;
 
   late final LegionEffect legionEffect;
   late final int legionValue;
@@ -19,7 +19,7 @@ class Character extends StatelessWidget {
     required this.level,
   }) : super(key: key) {
     legionValue = calculateBonusValue();
-    imgurl = parseImgURL();
+    _imgurl = parseImgURL();
   }
 
   factory Character.copy(Character other) {
@@ -154,7 +154,7 @@ class Character extends StatelessWidget {
                   alignment: Alignment.topRight,
                   heightFactor: 0.75,
                   child: Image(
-                    image: AssetImage(imgurl),
+                    image: AssetImage(_imgurl),
                     height: 210,
                     opacity: const AlwaysStoppedAnimation<double>(0.75),
                   ),
