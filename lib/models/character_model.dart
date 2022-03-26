@@ -1,15 +1,15 @@
 import 'package:legionprovider/models/linkskill_model.dart';
 import 'package:flutter/material.dart';
+import 'package:legionprovider/models/legioneffect_model.dart';
 
 class Character extends StatelessWidget {
   final String name;
   final String? shortName;
   final int level;
-  final String bonusStat;
-  final List<int> bonusValues;
-  final String bonusUnit;
   late final String imgurl;
-  late final int bonusValue;
+
+  late final LegionEffect legionEffect;
+  late final int legionValue;
   late final LinkSkill link;
 
   Character({
@@ -17,11 +17,8 @@ class Character extends StatelessWidget {
     required this.name,
     required this.shortName,
     required this.level,
-    required this.bonusStat,
-    required this.bonusValues,
-    required this.bonusUnit,
   }) : super(key: key) {
-    bonusValue = calculateBonusValue();
+    legionValue = calculateBonusValue();
     imgurl = parseImgURL();
   }
 
@@ -30,9 +27,6 @@ class Character extends StatelessWidget {
       name: other.name,
       shortName: other.shortName,
       level: other.level,
-      bonusStat: other.bonusStat,
-      bonusValues: other.bonusValues,
-      bonusUnit: other.bonusUnit,
     );
   }
 
@@ -40,17 +34,10 @@ class Character extends StatelessWidget {
     final name = data['name'] as String;
     final shortName = data['shortName'] as String?;
     final level = data['level'] as int;
-    final bonusStat = data['bonusStat'] as String;
-    final bonus = data['bonusValues'] as List<dynamic>;
-    final bonusValues = bonus.map((n) => n as int).toList();
-    final bonusUnit = data['unit'] as String;
     return Character(
       name: name,
       shortName: shortName,
       level: level,
-      bonusStat: bonusStat,
-      bonusValues: bonusValues,
-      bonusUnit: bonusUnit,
     );
   }
 
@@ -59,24 +46,21 @@ class Character extends StatelessWidget {
       'name': name,
       if (shortName != null) 'shortName': shortName,
       'level': level,
-      'bonusStat': bonusStat,
-      'bonusValues': bonusValues,
-      'unit': bonusUnit,
     };
   }
 
   int calculateBonusValue() {
     int value = 0;
     if (level >= 250) {
-      value = bonusValues[4];
+      value = legionEffect.bonusValues[4];
     } else if (level >= 200) {
-      value = bonusValues[3];
+      value = legionEffect.bonusValues[3];
     } else if (level >= 140) {
-      value = bonusValues[2];
+      value = legionEffect.bonusValues[2];
     } else if (level >= 100) {
-      value = bonusValues[1];
+      value = legionEffect.bonusValues[1];
     } else if (level >= 60) {
-      value = bonusValues[0];
+      value = legionEffect.bonusValues[0];
     }
     return value;
   }
@@ -88,7 +72,7 @@ class Character extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildRear(context);
+    return _buildFront(context);
   }
 
   Widget _buildFront(BuildContext context) {
@@ -145,14 +129,17 @@ class Character extends StatelessWidget {
               Card(
                 child: ListTile(
                   title: Text(
-                    bonusStat + " +" + bonusValue.toString() + bonusUnit,
+                    legionEffect.bonusStat +
+                        " +" +
+                        legionValue.toString() +
+                        legionEffect.bonusUnit,
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       const SizedBox(height: 8.0),
-                      Text("Bonus: " + bonusValues.toString()),
+                      Text("Bonus: " + legionEffect.bonusValues.toString()),
                     ],
                   ),
                 ),

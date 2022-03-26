@@ -66,7 +66,7 @@ class LinkSkill extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
-                        "Job: " + job,
+                        job,
                         style: Theme.of(context).textTheme.subtitle1!.copyWith(
                               color: Colors.grey.shade300,
                               decoration: TextDecoration.underline,
