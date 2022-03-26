@@ -1,0 +1,355 @@
+[
+  {
+    "name": "Hero",
+    "imgsrc": "./img/Hero.webp",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Paladin",
+    "imgsrc": "./img/Paladin.webp",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Dark Knight",
+    "imgsrc": "./img/DarkKnight.webp",
+    "level": 140,
+    "bonusStat": "HP",
+    "bonusValues": [2, 3, 4, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Magician (Fire, Poison)",
+    "shortName": "F/P Mage",
+    "imgsrc": "./img/FireMage.webp",
+    "level": 140,
+    "bonusStat": "MP",
+    "bonusValues": [2, 3, 4, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Magician (Ice, Lightning)",
+    "shortName": "I/L Mage",
+    "imgsrc": "./img/IceMage.webp",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Bishop",
+    "imgsrc": "./img/Bishop.webp",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Bowmaster",
+    "imgsrc": "./img/Bowmaster.webp",
+    "level": 140,
+    "bonusStat": "DEX",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Marksman",
+    "imgsrc": "./img/Marksman.webp",
+    "level": 140,
+    "bonusStat": "Critical Hit Rate",
+    "bonusValues": [1, 2, 3, 4, 5],
+    "unit": "%"
+  },
+  {
+    "name": "Pathfinder",
+    "imgsrc": "./img/Pathfinder.webp",
+    "level": 140,
+    "bonusStat": "DEX",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Night Lord",
+    "imgsrc": "./img/NightLord.webp",
+    "level": 140,
+    "bonusStat": "Critical Hit Rate",
+    "bonusValues": [1, 2, 3, 4, 5],
+    "unit": "%"
+  },
+  {
+    "name": "Shadower",
+    "imgsrc": "./img/Shadower.webp",
+    "level": 140,
+    "bonusStat": "LUK",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Dual Blade",
+    "imgsrc": "./img/DualBlade.webp",
+    "level": 140,
+    "bonusStat": "LUK",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Buccaneer",
+    "imgsrc": "./img/Buccaneer.webp",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Corsair",
+    "imgsrc": "./img/Corsair.webp",
+    "level": 140,
+    "bonusStat": "Summon Duration",
+    "bonusValues": [4, 6, 8, 10, 12],
+    "unit": "%"
+  },
+  {
+    "name": "Cannoneer",
+    "imgsrc": "./img/Cannoneer.webp",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Dawn Warrior",
+    "level": 140,
+    "bonusStat": "MaxHP",
+    "bonusValues": [250, 500, 1000, 2000, 2500],
+    "unit": ""
+  },
+  {
+    "name": "Blaze Wizard",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Wind Archer",
+    "level": 140,
+    "bonusStat": "DEX",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Night Walker",
+    "level": 140,
+    "bonusStat": "LUK",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Thunder Breaker",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Mihile",
+    "level": 140,
+    "bonusStat": "MaxHP",
+    "bonusValues": [250, 500, 1000, 2000, 2500],
+    "unit": ""
+  },
+  {
+    "name": "Aran",
+    "level": 140,
+    "bonusStat": "HP Recovery",
+    "bonusValues": [2, 4, 6, 8, 10],
+    "unit": "%"
+  },
+  {
+    "name": "Evan",
+    "level": 140,
+    "bonusStat": "MP Recovery",
+    "bonusValues": [2, 4, 6, 8, 10],
+    "unit": "%"
+  },
+  {
+    "name": "Mercedes",
+    "level": 140,
+    "bonusStat": "Skill Cooldown Reduction",
+    "bonusValues": [2, 3, 4, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Phantom",
+    "level": 140,
+    "bonusStat": "Meso Obtained",
+    "bonusValues": [1, 2, 3, 4, 5],
+    "unit": "%"
+  },
+  {
+    "name": "Shade",
+    "level": 140,
+    "bonusStat": "Critical Damage",
+    "bonusValues": [1, 2, 3, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Luminous",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Demon Slayer",
+    "level": 140,
+    "bonusStat": "Abnormal Status Resistance",
+    "bonusValues": [1, 2, 3, 4, 5],
+    "unit": ""
+  },
+  {
+    "name": "Demon Avenger",
+    "level": 140,
+    "bonusStat": "Boss Damage",
+    "bonusValues": [1, 2, 3, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Blaster",
+    "level": 140,
+    "bonusStat": "Ignore Enemy Defense",
+    "bonusValues": [1, 2, 3, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Battle Mage",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Wild Hunter",
+    "level": 140,
+    "bonusStat": "Increased Damage at 20% chance",
+    "bonusValues": [4, 8, 12, 16, 20],
+    "unit": "%"
+  },
+  {
+    "name": "Mechanic",
+    "level": 140,
+    "bonusStat": "Buff Duration",
+    "bonusValues": [5, 10, 15, 20, 25],
+    "unit": "%"
+  },
+  {
+    "name": "Xenon",
+    "level": 140,
+    "bonusStat": "STR/DEX/LUK",
+    "bonusValues": [5, 10, 20, 40, 50],
+    "unit": ""
+  },
+  {
+    "name": "Hayato",
+    "level": 140,
+    "bonusStat": "Critical Damage",
+    "bonusValues": [1, 2, 3, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Kanna",
+    "level": 140,
+    "bonusStat": "Boss Damage",
+    "bonusValues": [1, 2, 3, 5, 6],
+    "unit": "%"
+  },
+  {
+    "name": "Kaiser",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Kain",
+    "level": 140,
+    "bonusStat": "DEX",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Cadena",
+    "level": 140,
+    "bonusStat": "LUK",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Angelic Buster",
+    "level": 140,
+    "bonusStat": "DEX",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Adele",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Illium",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Ark",
+    "level": 140,
+    "bonusStat": "STR",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Lara",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Hoyoung",
+    "level": 140,
+    "bonusStat": "LUK",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Zero",
+    "level": 140,
+    "bonusStat": "EXP",
+    "bonusValues": [4, 6, 8, 10, 12],
+    "unit": "%"
+  },
+  {
+    "name": "Kinesis",
+    "level": 140,
+    "bonusStat": "INT",
+    "bonusValues": [10, 20, 40, 80, 100],
+    "unit": ""
+  },
+  {
+    "name": "Beast Tamer",
+    "level": 140,
+    "bonusStat": "Ignore Enemy Defense",
+    "bonusValues": [1, 2, 3, 5, 6],
+    "unit": "%"
+  }
+]
