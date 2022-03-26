@@ -222,7 +222,7 @@
   {
     "name": "Blaster",
     "level": 140,
-    "bonusStat": "Ignore Enemy Defense",
+    "bonusStat": "IED",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
   },

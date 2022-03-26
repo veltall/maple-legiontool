@@ -18,16 +18,38 @@ class LegionEffect extends StatelessWidget {
     final job = data['name'] as String;
     final bonusStat = data['bonusStat'] as String;
     final bonusUnit = data['unit'] as String;
-    final bonusValues = data['bonusValues'] as List;
-    return Character(
-      name: name,
-      shortName: shortName,
-      level: level,
+    final bonus = data['bonusValues'] as List<dynamic>;
+    final bonusValues = bonus.map((b) => b as int).toList();
+    return LegionEffect(
+      job: job,
+      bonusStat: bonusStat,
+      bonusUnit: bonusUnit,
+      bonusValues: bonusValues,
     );
+  }
+
+  int calculateBonusValue(int level) {
+    int value = 0;
+    if (level >= 250) {
+      value = bonusValues[4];
+    } else if (level >= 200) {
+      value = bonusValues[3];
+    } else if (level >= 140) {
+      value = bonusValues[2];
+    } else if (level >= 100) {
+      value = bonusValues[1];
+    } else if (level >= 60) {
+      value = bonusValues[0];
+    }
+    return value;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      width: 50,
+      height: 50,
+      color: Colors.indigo,
+    );
   }
 }
