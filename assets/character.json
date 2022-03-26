@@ -16,7 +16,7 @@
     "unit": ""
   },
   {
-    "name": "Dark Knight",
+    "name": "Dark\n Knight",
     "imgsrc": "./img/DarkKnight.webp",
     "level": 140,
     "bonusStat": "HP",
@@ -24,7 +24,7 @@
     "unit": "%"
   },
   {
-    "name": "Magician (Fire, Poison)",
+    "name": "Magician\n (Fire, Poison)",
     "shortName": "F/P Mage",
     "imgsrc": "./img/FireMage.webp",
     "level": 140,
@@ -33,7 +33,7 @@
     "unit": "%"
   },
   {
-    "name": "Magician (Ice, Lightning)",
+    "name": "Magician\n (Ice, Lightning)",
     "shortName": "I/L Mage",
     "imgsrc": "./img/IceMage.webp",
     "level": 140,
