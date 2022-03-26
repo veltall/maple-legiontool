@@ -1,36 +1,33 @@
-import 'dart:ui';
-
-import 'package:bordered_text/bordered_text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Character extends StatelessWidget {
   final String name;
   final String? shortName;
-  final String imgurl;
   final int level;
   final String bonusStat;
   final List<int> bonusValues;
   final String bonusUnit;
+  late final String imgurl;
   late final int bonusValue;
 
   Character({
     Key? key,
     required this.name,
     required this.shortName,
-    required this.imgurl,
     required this.level,
     required this.bonusStat,
     required this.bonusValues,
     required this.bonusUnit,
   }) : super(key: key) {
     bonusValue = calculateBonusValue();
+    imgurl = parseImgURL();
   }
 
   factory Character.copy(Character other) {
     return Character(
       name: other.name,
       shortName: other.shortName,
-      imgurl: other.imgurl,
       level: other.level,
       bonusStat: other.bonusStat,
       bonusValues: other.bonusValues,
@@ -41,7 +38,6 @@ class Character extends StatelessWidget {
   factory Character.fromMap(Map<String, dynamic> data) {
     final name = data['name'] as String;
     final shortName = data['shortName'] as String?;
-    final imgurl = data['imgsrc'] as String?;
     final level = data['level'] as int;
     final bonusStat = data['bonusStat'] as String;
     final bonus = data['bonusValues'] as List<dynamic>;
@@ -50,7 +46,6 @@ class Character extends StatelessWidget {
     return Character(
       name: name,
       shortName: shortName,
-      imgurl: imgurl ?? "./img/mushroom.png",
       level: level,
       bonusStat: bonusStat,
       bonusValues: bonusValues,
@@ -62,7 +57,6 @@ class Character extends StatelessWidget {
     return {
       'name': name,
       if (shortName != null) 'shortName': shortName,
-      'imgsrc': imgurl,
       'level': level,
       'bonusStat': bonusStat,
       'bonusValues': bonusValues,
@@ -71,16 +65,36 @@ class Character extends StatelessWidget {
   }
 
   int calculateBonusValue() {
-    return bonusValues[2];
+    int value = 0;
+    if (level >= 250) {
+      value = bonusValues[4];
+    } else if (level >= 200) {
+      value = bonusValues[3];
+    } else if (level >= 140) {
+      value = bonusValues[2];
+    } else if (level >= 100) {
+      value = bonusValues[1];
+    } else if (level >= 60) {
+      value = bonusValues[0];
+    }
+    return value;
+  }
+
+  String parseImgURL() {
+    String url = "./img/" + name.replaceAll(' ', '') + ".webp";
+    return url;
   }
 
   @override
   Widget build(BuildContext context) {
-    Color cardColor = Colors.grey.shade200;
+    return _buildFront(context);
+  }
+
+  Widget _buildFront(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: cardColor),
-        gradient: const LinearGradient(
+      key: const ValueKey(true),
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
@@ -92,45 +106,56 @@ class Character extends StatelessWidget {
       constraints: const BoxConstraints(maxHeight: 180),
       child: Stack(
         children: [
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Card(
-                  color: cardColor,
-                  child: ListTile(
-                    title: Align(
-                      alignment: Alignment.centerLeft,
-                      child: BorderedText(
-                        strokeColor: Colors.black,
-                        strokeJoin: StrokeJoin.bevel,
-                        strokeWidth: 4.0,
-                        child: Text(
-                          name,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall!
-                              .copyWith(
-                                color: Colors.white,
-                                decoration: TextDecoration.none,
-                                letterSpacing: 2.5,
-                              ),
-                          textAlign: TextAlign.start,
-                        ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(
+                    top: 16,
+                    left: 20,
+                    right: 8,
+                    bottom: 8,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        name,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium!
+                            .copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
+                        overflow: TextOverflow.ellipsis,
                       ),
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        const SizedBox(height: 8.0),
-                        Text("Level " + level.toString()),
-                        Text("Bonus: " + bonusValues.toString()),
-                      ],
-                    ),
+                      Text(
+                        "Level " + level.toString(),
+                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                              color: Colors.grey.shade300,
+                              decoration: TextDecoration.underline,
+                            ),
+                      ),
+                    ],
+                  )),
+              const Spacer(),
+              Card(
+                child: ListTile(
+                  title: Text(
+                    bonusStat + " +" + bonusValue.toString() + bonusUnit,
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      const SizedBox(height: 8.0),
+                      Text("Bonus: " + bonusValues.toString()),
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -142,7 +167,7 @@ class Character extends StatelessWidget {
                   child: Image(
                     image: AssetImage(imgurl),
                     height: 210,
-                    // opacity: const AlwaysStoppedAnimation<double>(0.75),
+                    opacity: const AlwaysStoppedAnimation<double>(0.75),
                   ),
                 ),
               ),
@@ -152,5 +177,9 @@ class Character extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget _buildRear(BuildContext context) {
+    return Container();
   }
 }

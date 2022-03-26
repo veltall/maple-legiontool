@@ -33,13 +33,14 @@ class _HomePageState extends State<HomePage> {
               value: null,
             )
           : ListView.builder(
-              itemCount: 5,
+              itemCount: _characters.length,
               itemBuilder: (context, index) {
                 final Map<String, dynamic> c = _characters[index];
                 return Column(
                   children: [
                     Character.fromMap(c),
-                    if (index < 4) const SizedBox(height: 24),
+                    if (index < _characters.length - 1)
+                      const SizedBox(height: 24),
                   ],
                 );
               },

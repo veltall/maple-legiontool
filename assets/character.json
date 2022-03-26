@@ -16,7 +16,7 @@
     "unit": ""
   },
   {
-    "name": "Dark\n Knight",
+    "name": "Dark Knight",
     "imgsrc": "./img/DarkKnight.webp",
     "level": 140,
     "bonusStat": "HP",
@@ -24,7 +24,7 @@
     "unit": "%"
   },
   {
-    "name": "Magician\n (Fire, Poison)",
+    "name": "Magician (Fire, Poison)",
     "shortName": "F/P Mage",
     "imgsrc": "./img/FireMage.webp",
     "level": 140,
@@ -33,7 +33,7 @@
     "unit": "%"
   },
   {
-    "name": "Magician\n (Ice, Lightning)",
+    "name": "Magician (Ice, Lightning)",
     "shortName": "I/L Mage",
     "imgsrc": "./img/IceMage.webp",
     "level": 140,
@@ -236,7 +236,7 @@
   {
     "name": "Wild Hunter",
     "level": 140,
-    "bonusStat": "Increased Damage at 20% chance",
+    "bonusStat": "Increased Damage",
     "bonusValues": [4, 8, 12, 16, 20],
     "unit": "%"
   },
@@ -312,7 +312,7 @@
   },
   {
     "name": "Ark",
-    "level": 140,
+    "level": 240,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -348,7 +348,7 @@
   {
     "name": "Beast Tamer",
     "level": 140,
-    "bonusStat": "Ignore Enemy Defense",
+    "bonusStat": "IED",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
   }
