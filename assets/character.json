@@ -2,7 +2,11 @@
   {
     "name": "Hero",
     "imgsrc": "./img/Hero.webp",
+    "color": "#f2d384",
+    "secondaryColor": "#952313",
     "level": 140,
+    "tera": true,
+    "mega": true,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -10,7 +14,11 @@
   {
     "name": "Paladin",
     "imgsrc": "./img/Paladin.webp",
+    "color": "#FDD835",
+    "secondaryColor": "#2b58b7",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -18,7 +26,11 @@
   {
     "name": "Dark Knight",
     "imgsrc": "./img/DarkKnight.webp",
+    "color": "#4b0287",
+    "secondaryColor": "#302a26",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "HP",
     "bonusValues": [2, 3, 4, 5, 6],
     "unit": "%"
@@ -27,7 +39,11 @@
     "name": "Magician (Fire, Poison)",
     "shortName": "F/P Mage",
     "imgsrc": "./img/FireMage.webp",
+    "color": "#f5d410",
+    "secondaryColor": "#1d9b2e",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "MP",
     "bonusValues": [2, 3, 4, 5, 6],
     "unit": "%"
@@ -36,7 +52,11 @@
     "name": "Magician (Ice, Lightning)",
     "shortName": "I/L Mage",
     "imgsrc": "./img/IceMage.webp",
+    "color": "#e7f8ff",
+    "secondaryColor": "#264f91",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -44,7 +64,11 @@
   {
     "name": "Bishop",
     "imgsrc": "./img/Bishop.webp",
+    "color": "#f9da8b",
+    "secondaryColor": "#50c6fd",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -52,7 +76,11 @@
   {
     "name": "Bowmaster",
     "imgsrc": "./img/Bowmaster.webp",
+    "color": "#60a335",
+    "secondaryColor": "#adaebe",
     "level": 140,
+    "tera": false,
+    "mega": true,
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -60,7 +88,11 @@
   {
     "name": "Marksman",
     "imgsrc": "./img/Marksman.webp",
+    "color": "#86b848",
+    "secondaryColor": "#0c2e35",
     "level": 140,
+    "tera": false,
+    "mega": true,
     "bonusStat": "Critical Hit Rate",
     "bonusValues": [1, 2, 3, 4, 5],
     "unit": "%"
@@ -68,7 +100,11 @@
   {
     "name": "Pathfinder",
     "imgsrc": "./img/Pathfinder.webp",
+    "color": "#383764",
+    "secondaryColor": "#2570a2",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -76,7 +112,11 @@
   {
     "name": "Night Lord",
     "imgsrc": "./img/NightLord.webp",
+    "color": "#58397f",
+    "secondaryColor": "#0d0e1f",
     "level": 140,
+    "tera": true,
+    "mega": false,
     "bonusStat": "Critical Hit Rate",
     "bonusValues": [1, 2, 3, 4, 5],
     "unit": "%"
@@ -84,7 +124,11 @@
   {
     "name": "Shadower",
     "imgsrc": "./img/Shadower.webp",
+    "color": "#ffffff",
+    "secondaryColor": "#1e1a19",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -92,7 +136,11 @@
   {
     "name": "Dual Blade",
     "imgsrc": "./img/DualBlade.webp",
+    "color": "#191721",
+    "secondaryColor": "#7c1b2d",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -100,7 +148,11 @@
   {
     "name": "Buccaneer",
     "imgsrc": "./img/Buccaneer.webp",
+    "color": "#2164c9",
+    "secondaryColor": "#b82418",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -108,7 +160,11 @@
   {
     "name": "Corsair",
     "imgsrc": "./img/Corsair.webp",
+    "color": "#2164c9",
+    "secondaryColor": "#090506",
     "level": 140,
+    "tera": true,
+    "mega": false,
     "bonusStat": "Summon Duration",
     "bonusValues": [4, 6, 8, 10, 12],
     "unit": "%"
@@ -116,7 +172,11 @@
   {
     "name": "Cannoneer",
     "imgsrc": "./img/Cannoneer.webp",
+    "color": "#be3430",
+    "secondaryColor": "#d19a66",
     "level": 140,
+    "tera": false,
+    "mega": false,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -124,6 +184,10 @@
   {
     "name": "Dawn Warrior",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#f1f1f1",
+    "secondaryColor": "#daa27e",
     "bonusStat": "MaxHP",
     "bonusValues": [250, 500, 1000, 2000, 2500],
     "unit": ""
@@ -131,6 +195,10 @@
   {
     "name": "Blaze Wizard",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#fee8a3",
+    "secondaryColor": "#f1583e",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -138,6 +206,10 @@
   {
     "name": "Wind Archer",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#c8df59",
+    "secondaryColor": "#78c39b",
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -145,6 +217,10 @@
   {
     "name": "Night Walker",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#3d1f99",
+    "secondaryColor": "#242732",
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -152,6 +228,10 @@
   {
     "name": "Thunder Breaker",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#d9f3f2",
+    "secondaryColor": "#1885f2",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -159,6 +239,10 @@
   {
     "name": "Mihile",
     "level": 140,
+    "tera": false,
+    "mega": true,
+    "color": "#edb788",
+    "secondaryColor": "#752c2b",
     "bonusStat": "MaxHP",
     "bonusValues": [250, 500, 1000, 2000, 2500],
     "unit": ""
@@ -166,6 +250,10 @@
   {
     "name": "Aran",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#ffffff",
+    "secondaryColor": "#69c3d9",
     "bonusStat": "HP Recovery",
     "bonusValues": [2, 4, 6, 8, 10],
     "unit": "%"
@@ -173,6 +261,10 @@
   {
     "name": "Evan",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#603f84",
+    "secondaryColor": "#df403c",
     "bonusStat": "MP Recovery",
     "bonusValues": [2, 4, 6, 8, 10],
     "unit": "%"
@@ -180,6 +272,10 @@
   {
     "name": "Mercedes",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#ffeab6",
+    "secondaryColor": "#709d4c",
     "bonusStat": "Cooldown Reduction",
     "bonusValues": [2, 3, 4, 5, 6],
     "unit": "%"
@@ -187,6 +283,10 @@
   {
     "name": "Phantom",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#4789d0",
+    "secondaryColor": "#f8db68",
     "bonusStat": "Meso Obtained",
     "bonusValues": [1, 2, 3, 4, 5],
     "unit": "%"
@@ -194,6 +294,10 @@
   {
     "name": "Shade",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#6ff5c6",
+    "secondaryColor": "#4b4346",
     "bonusStat": "Critical Damage",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
@@ -201,6 +305,10 @@
   {
     "name": "Luminous",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#d2d9f5",
+    "secondaryColor": "#38384e",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -208,6 +316,10 @@
   {
     "name": "Demon Slayer",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#67202b",
+    "secondaryColor": "#141213",
     "bonusStat": "Status Resistance",
     "bonusValues": [1, 2, 3, 4, 5],
     "unit": ""
@@ -215,6 +327,10 @@
   {
     "name": "Demon Avenger",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#f5f3f4",
+    "secondaryColor": "#910c2e",
     "bonusStat": "Boss Damage",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
@@ -222,6 +338,10 @@
   {
     "name": "Blaster",
     "level": 140,
+    "tera": false,
+    "mega": true,
+    "color": "#934845",
+    "secondaryColor": "#2d222e",
     "bonusStat": "IED",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
@@ -229,6 +349,10 @@
   {
     "name": "Battle Mage",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#63e1fe",
+    "secondaryColor": "#30246a",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -236,6 +360,10 @@
   {
     "name": "Wild Hunter",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#809a40",
+    "secondaryColor": "#1e1a25",
     "bonusStat": "Mob Damage",
     "bonusValues": [4, 8, 12, 16, 20],
     "unit": "%"
@@ -243,6 +371,10 @@
   {
     "name": "Mechanic",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#1d1d1f",
+    "secondaryColor": "#e6a64a",
     "bonusStat": "Buff Duration",
     "bonusValues": [5, 10, 15, 20, 25],
     "unit": "%"
@@ -250,6 +382,10 @@
   {
     "name": "Xenon",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#9cdbfa",
+    "secondaryColor": "#caab55",
     "bonusStat": "STR/DEX/LUK",
     "bonusValues": [5, 10, 20, 40, 50],
     "unit": ""
@@ -257,6 +393,10 @@
   {
     "name": "Hayato",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#66203b",
+    "secondaryColor": "#d49444",
     "bonusStat": "Critical Damage",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
@@ -264,6 +404,10 @@
   {
     "name": "Kanna",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#c466d6",
+    "secondaryColor": "#7461bc",
     "bonusStat": "Boss Damage",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"
@@ -271,6 +415,10 @@
   {
     "name": "Kaiser",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#470b20",
+    "secondaryColor": "#261421",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -278,6 +426,10 @@
   {
     "name": "Kain",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#f53d1f",
+    "secondaryColor": "#262422",
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -285,6 +437,10 @@
   {
     "name": "Cadena",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#ef2355",
+    "secondaryColor": "#2f372c",
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -292,6 +448,10 @@
   {
     "name": "Angelic Buster",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#ffcbc1",
+    "secondaryColor": "#91344f",
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -299,6 +459,10 @@
   {
     "name": "Adele",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#d7f6f9",
+    "secondaryColor": "#5b94cf",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -306,6 +470,10 @@
   {
     "name": "Illium",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#efeeef",
+    "secondaryColor": "#404478",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -313,6 +481,10 @@
   {
     "name": "Ark",
     "level": 240,
+    "tera": false,
+    "mega": false,
+    "color": "#cb3f28",
+    "secondaryColor": "#361d21",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -320,6 +492,10 @@
   {
     "name": "Lara",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#85e25c",
+    "secondaryColor": "#59d7fd",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -327,6 +503,10 @@
   {
     "name": "Hoyoung",
     "level": 140,
+    "tera": false,
+    "mega": true,
+    "color": "#fffffd",
+    "secondaryColor": "#76ccd8",
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -334,6 +514,10 @@
   {
     "name": "Zero",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#fbe79d",
+    "secondaryColor": "#bb232b",
     "bonusStat": "EXP",
     "bonusValues": [4, 6, 8, 10, 12],
     "unit": "%"
@@ -341,6 +525,10 @@
   {
     "name": "Kinesis",
     "level": 140,
+    "tera": false,
+    "mega": false,
+    "color": "#ffffff",
+    "secondaryColor": "#0b0d0f",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
     "unit": ""
@@ -348,6 +536,10 @@
   {
     "name": "Beast Tamer",
     "level": 140,
+    "tera": true,
+    "mega": false,
+    "color": "#fdf273",
+    "secondaryColor": "#7ab25d",
     "bonusStat": "IED",
     "bonusValues": [1, 2, 3, 5, 6],
     "unit": "%"

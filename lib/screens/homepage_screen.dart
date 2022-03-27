@@ -26,7 +26,13 @@ class _HomePageState extends State<HomePage> {
     readJson();
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Character List"),
+        title: Text(
+          "Character List",
+          style: Theme.of(context).textTheme.headline5!.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              ),
+        ),
       ),
       body: _characters.isEmpty
           ? const RefreshProgressIndicator(
@@ -45,6 +51,35 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
+      backgroundColor: Colors.grey[200],
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.local_fire_department,
+          color: Theme.of(context).cardColor,
+        ),
+        onPressed: () {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      extendBody: true,
+      bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        color: Theme.of(context).colorScheme.primary,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+              color: Theme.of(context).secondaryHeaderColor,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.menu),
+              color: Theme.of(context).secondaryHeaderColor,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

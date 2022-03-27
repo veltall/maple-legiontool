@@ -47,6 +47,8 @@ class LegionEffect extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 5.0,
+      borderOnForeground: true,
       child: ListTile(
         title: Text(
           bonusStat,
