@@ -27,7 +27,7 @@ class LinkSkill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: const ValueKey(true),
+      key: const ValueKey(false),
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -56,13 +56,11 @@ class LinkSkill extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.headlineSmall!.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
@@ -79,7 +77,7 @@ class LinkSkill extends StatelessWidget {
                 child: ListTile(
                   title: Text(
                     bonusStat + " +" + bonusValue.toString() + bonusUnit,
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    style: Theme.of(context).textTheme.headline6,
                   ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,22 +90,17 @@ class LinkSkill extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ClipRect(
-                child: Align(
-                  alignment: Alignment.topRight,
-                  heightFactor: 0.75,
-                  child: Image(
-                    image: AssetImage(imgurl),
-                    height: 210,
-                    opacity: const AlwaysStoppedAnimation<double>(0.75),
-                  ),
-                ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: Align(
+              alignment: const Alignment(1, -0.60),
+              child: Image(
+                image: AssetImage(imgurl),
+                height: 70,
+                fit: BoxFit.fill,
+                opacity: const AlwaysStoppedAnimation<double>(0.75),
               ),
-              const SizedBox(height: 4),
-            ],
+            ),
           ),
         ],
       ),

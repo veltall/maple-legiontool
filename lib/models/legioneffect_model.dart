@@ -46,10 +46,33 @@ class LegionEffect extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      color: Colors.indigo,
+    return Card(
+      child: ListTile(
+        title: Text(
+          bonusStat,
+          style: Theme.of(context).textTheme.headline6,
+        ),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const SizedBox(height: 8.0),
+            Table(
+              border: TableBorder.all(),
+              defaultColumnWidth: const FixedColumnWidth(40),
+              children: [
+                TableRow(
+                  children: bonusValues.map((bv) {
+                    return Text(
+                      bv.toString() + bonusUnit,
+                      textAlign: TextAlign.center,
+                    );
+                  }).toList(),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

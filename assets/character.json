@@ -180,7 +180,7 @@
   {
     "name": "Mercedes",
     "level": 140,
-    "bonusStat": "Skill Cooldown Reduction",
+    "bonusStat": "Cooldown Reduction",
     "bonusValues": [2, 3, 4, 5, 6],
     "unit": "%"
   },
@@ -208,7 +208,7 @@
   {
     "name": "Demon Slayer",
     "level": 140,
-    "bonusStat": "Abnormal Status Resistance",
+    "bonusStat": "Status Resistance",
     "bonusValues": [1, 2, 3, 4, 5],
     "unit": ""
   },
@@ -236,7 +236,7 @@
   {
     "name": "Wild Hunter",
     "level": 140,
-    "bonusStat": "Increased Damage",
+    "bonusStat": "Mob Damage",
     "bonusValues": [4, 8, 12, 16, 20],
     "unit": "%"
   },

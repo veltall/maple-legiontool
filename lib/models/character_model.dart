@@ -1,5 +1,7 @@
 import 'dart:convert';
-
+import 'dart:math';
+import 'package:flip_card/flip_card.dart';
+import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/services.dart';
 import 'package:legionprovider/models/linkskill_model.dart';
 import 'package:flutter/material.dart';
@@ -83,7 +85,12 @@ class _CharacterState extends State<Character> {
 
   @override
   Widget build(BuildContext context) {
-    return _buildFront(context);
+    return FlipCard(
+      flipOnTouch: true,
+      direction: FlipDirection.VERTICAL,
+      front: _buildFront(context),
+      back: _buildRear(context),
+    );
   }
 
   Widget _buildFront(BuildContext context) {
@@ -120,7 +127,7 @@ class _CharacterState extends State<Character> {
                     Text(
                       cardTitle,
                       style:
-                          Theme.of(context).textTheme.headlineMedium!.copyWith(
+                          Theme.of(context).textTheme.headlineSmall!.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600,
                               ),
