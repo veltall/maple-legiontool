@@ -12,6 +12,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Invincible Belief",
+      "rating": 1,
       "job": "Hero",
       "desc": "Automatically activates when your health falls to 15% of your Max HP or below. Restores 35% of Max HP every 1 sec for 3 sec\nCooldown: 210 sec.",
       "bonuses": [
@@ -37,6 +38,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Invincible Belief",
+      "rating": 1,
       "job": "Paladin",
       "desc": "Automatically activates when your health falls to 15% of your Max HP or below. Restores 35% of Max HP every 1 sec for 3 sec\nCooldown: 210 sec.",
       "bonuses": [
@@ -62,6 +64,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Invincible Belief",
+      "rating": 1,
       "job": "Dark Knight",
       "desc": "Automatically activates when your health falls to 15% of your Max HP or below. Restores 35% of Max HP every 1 sec for 3 sec\nCooldown: 210 sec.",
       "bonuses": [
@@ -88,6 +91,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Empirical Knowledge",
+      "rating": 3,
       "job": "Magician (Fire, Poison)",
       "desc": "When attacking, has a 25% chance to identify the weakness of the enemy with the highest Max HP among those struck, granting you the following bonuses against them:\nDamage per Stack: +3%, Enemy DEF Ignored per Stack: +3%\nEffect Duration: 10 sec, Stacks up to 3 times",
       "bonuses": [
@@ -120,6 +124,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Empirical Knowledge",
+      "rating": 3,
       "job": "Magician (Ice, Lightning)",
       "desc": "When attacking, has a 25% chance to identify the weakness of the enemy with the highest Max HP among those struck, granting you the following bonuses against them:\nDamage per Stack: +3%, Enemy DEF Ignored per Stack: +3%\nEffect Duration: 10 sec, Stacks up to 3 times",
       "bonuses": [
@@ -151,6 +156,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Empirical Knowledge",
+      "rating": 3,
       "job": "Bishop",
       "desc": "When attacking, has a 25% chance to identify the weakness of the enemy with the highest Max HP among those struck, granting you the following bonuses against them:\nDamage per Stack: +3%, Enemy DEF Ignored per Stack: +3%\nEffect Duration: 10 sec, Stacks up to 3 times",
       "bonuses": [
@@ -182,11 +188,12 @@
     "unit": "",
     "linkSkill": {
       "name": "Adventurer's Curiosity",
+      "rating": 2,
       "job": "Bowmaster",
       "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
       "bonuses": [
         {
-          "stat": "Monster Collection chance",
+          "stat": "Mob Collection chance",
           "desc": "",
           "values": [10, 15, 20, 25, 30, 35],
           "unit": "%"
@@ -213,11 +220,12 @@
     "unit": "%",
     "linkSkill": {
       "name": "Adventurer's Curiosity",
+      "rating": 2,
       "job": "Marksman",
       "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
       "bonuses": [
         {
-          "stat": "Monster Collection chance",
+          "stat": "Mob Collection chance",
           "desc": "",
           "values": [10, 15, 20, 25, 30, 35],
           "unit": "%"
@@ -244,11 +252,12 @@
     "unit": "",
     "linkSkill": {
       "name": "Adventurer's Curiosity",
+      "rating": 2,
       "job": "Pathfinder",
       "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
       "bonuses": [
         {
-          "stat": "Monster Collection chance",
+          "stat": "Mob Collection chance",
           "desc": "",
           "values": [10, 15, 20, 25, 30, 35],
           "unit": "%"
@@ -275,6 +284,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Thief's Cunning",
+      "rating": 4,
       "job": "Night Lord",
       "desc": "Upon debuffing an enemy, Damage: +18%. Duration: 10 sec\nCooldown: 20 sec.",
       "bonuses": [
@@ -300,6 +310,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Thief's Cunning",
+      "rating": 4,
       "job": "Shadower",
       "desc": "Upon debuffing an enemy, Damage: +18%. Duration: 10 sec\nCooldown: 20 sec.",
       "bonuses": [
@@ -325,6 +336,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Thief's Cunning",
+      "rating": 4,
       "job": "Dual Blade",
       "desc": "Upon debuffing an enemy, Damage: +18%. Duration: 10 sec\nCooldown: 20 sec.",
       "bonuses": [
@@ -350,6 +362,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Pirate Blessing",
+      "rating": 3,
       "job": "Buccaneer",
       "desc": "STR: +70, DEX: +70, INT: +70, LUK: +70, Max HP: +1225, Max MP: +1225\nDamage Taken: -15%",
       "bonuses": [
@@ -360,7 +373,7 @@
           "unit": ""
         },
         {
-          "stat": "Damage Taken reduction",
+          "stat": "Damage Reduction",
           "desc": "",
           "values": [5, 7, 9, 11, 13, 15],
           "unit": "%"
@@ -381,6 +394,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Pirate Blessing",
+      "rating": 3,
       "job": "Buccaneer",
       "desc": "STR: +70, DEX: +70, INT: +70, LUK: +70, Max HP: +1225, Max MP: +1225\nDamage Taken: -15%",
       "bonuses": [
@@ -391,7 +405,7 @@
           "unit": ""
         },
         {
-          "stat": "Damage Taken reduction",
+          "stat": "Damage Reduction",
           "desc": "",
           "values": [5, 7, 9, 11, 13, 15],
           "unit": "%"
@@ -412,6 +426,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Pirate Blessing",
+      "rating": 3,
       "job": "Buccaneer",
       "desc": "STR: +70, DEX: +70, INT: +70, LUK: +70, Max HP: +1225, Max MP: +1225\nDamage Taken: -15%",
       "bonuses": [
@@ -422,7 +437,7 @@
           "unit": ""
         },
         {
-          "stat": "Damage Taken reduction",
+          "stat": "Damage Reduction",
           "desc": "",
           "values": [5, 7, 9, 11, 13, 15],
           "unit": "%"
@@ -442,6 +457,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Cygnus Blessing",
+      "rating": 3,
       "job": "Dawn Warrior",
       "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
       "bonuses": [
@@ -452,13 +468,13 @@
           "unit": ""
         },
         {
-          "stat": "Abnormal Status Resistance",
+          "stat": "Status Resistance",
           "desc": "",
           "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": ""
         },
         {
-          "stat": "Elemental Resistance",
+          "stat": "Ele. Resistance",
           "desc": "",
           "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": "%"
@@ -478,6 +494,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Cygnus Blessing",
+      "rating": 3,
       "job": "Blaze Wizard",
       "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
       "bonuses": [
@@ -488,13 +505,13 @@
           "unit": ""
         },
         {
-          "stat": "Abnormal Status Resistance",
+          "stat": "Status Resistance",
           "desc": "",
           "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": ""
         },
         {
-          "stat": "Elemental Resistance",
+          "stat": "Ele. Resistance",
           "desc": "",
           "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": "%"
@@ -514,6 +531,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Cygnus Blessing",
+      "rating": 3,
       "job": "Wind Archer",
       "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
       "bonuses": [
@@ -524,13 +542,13 @@
           "unit": ""
         },
         {
-          "stat": "Abnormal Status Resistance",
+          "stat": "Status Resistance",
           "desc": "",
           "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": ""
         },
         {
-          "stat": "Elemental Resistance",
+          "stat": "Ele. Resistance",
           "desc": "",
           "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": "%"
@@ -550,6 +568,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Cygnus Blessing",
+      "rating": 3,
       "job": "Night Walker",
       "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
       "bonuses": [
@@ -560,13 +579,13 @@
           "unit": ""
         },
         {
-          "stat": "Abnormal Status Resistance",
+          "stat": "Status Resistance",
           "desc": "",
           "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": ""
         },
         {
-          "stat": "Elemental Resistance",
+          "stat": "Ele. Resistance",
           "desc": "",
           "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": "%"
@@ -586,6 +605,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Cygnus Blessing",
+      "rating": 3,
       "job": "Thunder Breaker",
       "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
       "bonuses": [
@@ -596,13 +616,13 @@
           "unit": ""
         },
         {
-          "stat": "Abnormal Status Resistance",
+          "stat": "Status Resistance",
           "desc": "",
           "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": ""
         },
         {
-          "stat": "Elemental Resistance",
+          "stat": "Ele. Resistance",
           "desc": "",
           "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
           "unit": "%"
@@ -622,6 +642,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Knight's Watch",
+      "rating": 5,
       "job": "Mihile",
       "desc": "Knockback Resistance Chance: +100%, Duration: 220 sec. (Cooldown: 180 sec)",
       "bonuses": [
@@ -629,7 +650,7 @@
           "stat": "Knockback Resistance duration",
           "desc": "",
           "values": [140, 180, 220],
-          "unit": "seconds"
+          "unit": "s"
         }
       ]
     }
@@ -646,6 +667,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Combo Kill Blessing",
+      "rating": 4,
       "job": "Aran",
       "desc": "Combo Kill Marble EXP: +900% (permanently)",
       "bonuses": [
@@ -670,6 +692,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Rune Persistence",
+      "rating": 5,
       "job": "Evan",
       "desc": "Rune Duration: +70%",
       "bonuses": [
@@ -694,6 +717,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Elven Blessing",
+      "rating": 5,
       "job": "Mercedes",
       "desc": "Permanently receive 20% additional EXP",
       "bonuses": [
@@ -718,6 +742,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Phantom Instinct",
+      "rating": 5,
       "job": "Phantom",
       "desc": "Critical Rate +20%",
       "bonuses": [
@@ -742,6 +767,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Close Call",
+      "rating": 3,
       "job": "Shade",
       "desc": "Fatal Attack Survival Chance: 10%",
       "bonuses": [
@@ -766,6 +792,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Light Wash",
+      "rating": 5,
       "job": "Luminous",
       "desc": "20% of enemy DEF ignored",
       "bonuses": [
@@ -790,6 +817,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Fury Unleashed",
+      "rating": 5,
       "job": "Demon Slayer",
       "desc": "When attacking Boss Monster- Damage: +20%,",
       "bonuses": [
@@ -814,6 +842,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Wild Rage",
+      "rating": 4,
       "job": "Demon Avenger",
       "desc": "Damage: +15%",
       "bonuses": [
@@ -838,14 +867,15 @@
     "unit": "%",
     "linkSkill": {
       "name": "Spirit of Freedom",
+      "rating": 5,
       "job": "Blaster",
-      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "desc": "Grants 8 s of invincibility after being revived. Removed upon moving to another map",
       "bonuses": [
         {
           "stat": "Invincibility Duration",
           "desc": "",
           "values": [1, 2, 3, 4, 5, 6, 7, 8],
-          "unit": "seconds"
+          "unit": "s"
         }
       ]
     }
@@ -862,14 +892,15 @@
     "unit": "",
     "linkSkill": {
       "name": "Spirit of Freedom",
+      "rating": 5,
       "job": "Battle Mage",
-      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "desc": "Grants 8 s of invincibility after being revived. Removed upon moving to another map",
       "bonuses": [
         {
           "stat": "Invincibility Duration",
           "desc": "",
           "values": [1, 2, 3, 4, 5, 6, 7, 8],
-          "unit": "seconds"
+          "unit": "s"
         }
       ]
     }
@@ -886,14 +917,15 @@
     "unit": "%",
     "linkSkill": {
       "name": "Spirit of Freedom",
+      "rating": 5,
       "job": "Wild Hunter",
-      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "desc": "Grants 8 s of invincibility after being revived. Removed upon moving to another map",
       "bonuses": [
         {
           "stat": "Invincibility Duration",
           "desc": "",
           "values": [1, 2, 3, 4, 5, 6, 7, 8],
-          "unit": "seconds"
+          "unit": "s"
         }
       ]
     }
@@ -910,14 +942,15 @@
     "unit": "%",
     "linkSkill": {
       "name": "Spirit of Freedom",
+      "rating": 5,
       "job": "Mechanic",
-      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "desc": "Grants 8 s of invincibility after being revived. Removed upon moving to another map",
       "bonuses": [
         {
           "stat": "Invincibility Duration",
           "desc": "",
           "values": [1, 2, 3, 4, 5, 6, 7, 8],
-          "unit": "seconds"
+          "unit": "s"
         }
       ]
     }
@@ -934,6 +967,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Hybrid Logic",
+      "rating": 3,
       "job": "Xenon",
       "desc": "All Stats: +10%",
       "bonuses": [
@@ -958,6 +992,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Keen Edge",
+      "rating": 2,
       "job": "Hayato",
       "desc": "All Stats: 25, Attack Power Increase: 15, Magic Attack Power Increase: 15",
       "bonuses": [
@@ -988,6 +1023,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Elementalism",
+      "rating": 5,
       "job": "Kanna",
       "desc": "Permanent Damage Increase: 10%",
       "bonuses": [
@@ -1012,6 +1048,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Iron Will",
+      "rating": 2,
       "job": "Kaiser",
       "desc": "Max HP: +20%",
       "bonuses": [
@@ -1036,6 +1073,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Time to Prepare",
+      "rating": 3,
       "job": "Kain",
       "desc": "After completing Time to Prepare at least 1 time, then upon either defeating 8 enemies or attacking a boss 5 times, damage increases by 17% for 20 sec, for every 5 times you've stacked Time to Prepare.\nCooldown: 40 sec",
       "bonuses": [
@@ -1060,6 +1098,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Unfair Advantage",
+      "rating": 4,
       "job": "Cadena",
       "desc": "Attacks against weaker opponents deal +6% damage. Attacks against monsters afflicted by Abnormal Statuses deal +6% damage.",
       "bonuses": [
@@ -1090,6 +1129,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Terms and Conditions",
+      "rating": 4,
       "job": "Angelic Buster",
       "desc": "+120% skill damage for 10 sec when active.\nCooldown: 90 sec. Skill effects reduced to half when used with link skill.",
       "bonuses": [
@@ -1114,6 +1154,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Noble Fire",
+      "rating": 4,
       "job": "Adele",
       "desc": "Boss Damage: +4%.\nIncreases damage by 2% up to 8% for each party member, including yourself, on the same map.\nIf you are not in a party, you will be considered to be in your own party.",
       "bonuses": [
@@ -1138,6 +1179,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Tide of Battle",
+      "rating": 4,
       "job": "Illium",
       "desc": "Activated when moving a certain distance. Max number of stacks: 6 times, Duration: 5 sec, Damage per stack: +2%",
       "bonuses": [
@@ -1162,6 +1204,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Solus",
+      "rating": 5,
       "job": "Ark",
       "desc": "Activates when the combat state continues for 5 sec. Can be stacked a max of 5 times. Duration: 5 sec.\nWhen activated, damage increases by 1%, and damage increases an extra 3% per stack",
       "bonuses": [
@@ -1186,6 +1229,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Nature's Friend",
+      "rating": 5,
       "job": "Lara",
       "desc": "Damage: +5%.\nActivate nature's help upon defeating 20 normal monsters. Increases Damage Against Normal Monsters by 11% for 30 sec. when nature's help is active.\nCooldown: 30 sec.",
       "bonuses": [
@@ -1216,6 +1260,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Bravado",
+      "rating": 5,
       "job": "Hoyoung",
       "desc": "Enemy DEF Ignored: +10%, Damage: +14% against enemies with 100% HP",
       "bonuses": [
@@ -1246,6 +1291,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Rhinne's Blessing",
+      "rating": 2,
       "job": "Zero",
       "desc": "Incoming damage reduced: 15%. Defense ignored: 10%",
       "bonuses": [
@@ -1256,7 +1302,7 @@
           "unit": "%"
         },
         {
-          "stat": "Damage Taken Reduction",
+          "stat": "Damage Reduction",
           "desc": "",
           "values": [3, 6, 9, 12, 15],
           "unit": "%"
@@ -1276,6 +1322,7 @@
     "unit": "",
     "linkSkill": {
       "name": "Judgment",
+      "rating": 4,
       "job": "Kinesis",
       "desc": "Critical Damage: +4%",
       "bonuses": [
@@ -1300,6 +1347,7 @@
     "unit": "%",
     "linkSkill": {
       "name": "Focus Spirit",
+      "rating": 4,
       "job": "Beast Tamer",
       "desc": "Boss Damage: +10%.\nCritical Rate: +10%.\nMax HP/MP +5%.",
       "bonuses": [

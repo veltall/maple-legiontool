@@ -51,8 +51,9 @@ class _HomePageState extends State<HomePage> {
                 return Column(
                   children: [
                     Character.fromMap(c),
+                    // if (index < 5 - 1) const SizedBox(height: 24),
                     if (index < _characters.length - 1)
-                      const SizedBox(height: 24),
+                      const Divider(height: 2),
                   ],
                 );
               },

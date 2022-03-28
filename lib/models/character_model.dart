@@ -117,8 +117,8 @@ class _CharacterState extends State<Character> {
       controller: _controller,
       flipOnTouch: false,
       direction: FlipDirection.VERTICAL,
-      front: _buildFront(context),
-      back: _buildRear(context),
+      front: _buildRear(context),
+      back: _buildFront(context),
     );
   }
 
@@ -137,17 +137,17 @@ class _CharacterState extends State<Character> {
         ),
       ),
       constraints: const BoxConstraints(maxHeight: 200),
+      padding: const EdgeInsets.all(4),
       child: Stack(
         children: [
           buildCharacterInfo(),
-          buildHeroImage(),
+          buildHeroImage("legion"),
         ],
       ),
     );
   }
 
   Widget _buildRear(BuildContext context) {
-    // return LinkSkill();
     return Container(
       key: const ValueKey(true),
       decoration: BoxDecoration(
@@ -162,10 +162,12 @@ class _CharacterState extends State<Character> {
         ),
       ),
       constraints: const BoxConstraints(maxHeight: 200),
+      padding: const EdgeInsets.all(4),
       child: Stack(
         children: [
-          buildTitleBar(title: "Elementalism"),
-          buildHeroImage(),
+          buildTitleBar(title: widget.linkSkill.name),
+          widget.linkSkill,
+          buildHeroImage("link"),
         ],
       ),
     );
@@ -183,15 +185,12 @@ class _CharacterState extends State<Character> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(4),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              buildTitleBar(title: cardTitle),
-              buildStatusBar(),
-            ],
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            buildTitleBar(title: cardTitle),
+            buildStatusBar(),
+          ],
         ),
         // const Spacer(),
         buildCTAButton(),
@@ -205,23 +204,26 @@ class _CharacterState extends State<Character> {
   }
 
   Widget buildTitleBar({required String title}) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SimpleShadow(
-          offset: const Offset(-3, 2),
-          opacity: 0.5,
-          child: Text(
-            title,
-            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                ),
-            overflow: TextOverflow.ellipsis,
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SimpleShadow(
+            offset: const Offset(-3, 2),
+            opacity: 0.5,
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
-        ),
-        buildCardFlipIconButton(),
-      ],
+          buildCardFlipIconButton(),
+        ],
+      ),
     );
   }
 
@@ -238,28 +240,41 @@ class _CharacterState extends State<Character> {
     );
   }
 
-  Widget buildHeroImage() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        ClipRect(
-          child: Align(
-            alignment: Alignment.topRight,
-            heightFactor: 0.75,
-            child: SimpleShadow(
-              opacity: 0.55,
-              offset: const Offset(-7, 5),
-              sigma: 7,
-              child: Image(
-                image: AssetImage(widget._imgurl),
-                height: 210,
+  Widget buildHeroImage(String option) {
+    Widget img = Container();
+    if (option == "legion") {
+      img = Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          ClipRect(
+            child: Align(
+              alignment: Alignment.topRight,
+              heightFactor: 0.75,
+              child: SimpleShadow(
+                opacity: 0.55,
+                offset: const Offset(-7, 5),
+                sigma: 7,
+                child: Image(
+                  image: AssetImage(widget._imgurl),
+                  height: 210,
+                ),
               ),
             ),
           ),
+          const SizedBox(height: 4),
+        ],
+      );
+    } else if (option == "link") {
+      img = Align(
+        alignment: const Alignment(0.95, -0.1),
+        child: Image(
+          image: AssetImage(widget.linkSkill.imgurl),
+          height: 50,
+          fit: BoxFit.fill,
         ),
-        const SizedBox(height: 4),
-      ],
-    );
+      );
+    }
+    return img;
   }
 
   Widget buildCTAButton() {

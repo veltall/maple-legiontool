@@ -4,23 +4,28 @@ class LinkSkill extends StatelessWidget {
   final String name;
   final String job;
   final String desc;
+  final int rating;
   final List<LinkBonus> bonuses;
   late final String imgurl;
+  late final int masterLevel;
 
   LinkSkill({
     Key? key,
     required this.name,
     required this.job,
     required this.desc,
+    required this.rating,
     required this.bonuses,
   }) : super(key: key) {
     imgurl = parseImageURL();
+    masterLevel = bonuses[0].values.length;
   }
 
   factory LinkSkill.fromMap(Map<String, dynamic> linkMap) {
     final name = linkMap['name'] as String;
     final job = linkMap['job'] as String;
     final desc = linkMap['desc'] as String;
+    final rating = linkMap['rating'] as int;
     final bonuses = linkMap['bonuses'] as List<dynamic>;
     final linkBonuses = bonuses.map((listItem) {
       return listItem as Map<String, dynamic>;
@@ -32,6 +37,7 @@ class LinkSkill extends StatelessWidget {
       name: name,
       job: job,
       desc: desc,
+      rating: rating,
       bonuses: linkList,
     );
   }
@@ -43,10 +49,63 @@ class LinkSkill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 200,
-      color: Theme.of(context).primaryColorLight,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Row(
+            children: List.generate(5, (i) {
+              return Icon(
+                (i < rating) ? Icons.star : Icons.star_border,
+                color: Colors.yellow.shade400,
+              );
+            }).toList(),
+          ),
+        ),
+        Container(
+          constraints: const BoxConstraints(maxHeight: 100),
+          child: Card(
+            child: SizedBox.expand(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Master Level: " + masterLevel.toString()),
+                    ...(bonuses.map((b) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(b.stat),
+                          Table(
+                            defaultColumnWidth: const FixedColumnWidth(35),
+                            border: TableBorder.symmetric(
+                              inside: const BorderSide(),
+                            ),
+                            children: [
+                              TableRow(
+                                children: b.values.map((v) {
+                                  return Flexible(
+                                    child: Text(
+                                      v.toString() + b.unit,
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  );
+                                }).toList(),
+                              )
+                            ],
+                          ),
+                        ],
+                      );
+                    }).toList()),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -77,6 +136,15 @@ class LinkBonus {
       unit: unit,
     );
   }
+
+  // Map<String, dynamic> toMap() {
+
+  // }
+
+  // @override
+  // String toString() {
+
+  // }
 
   int getBonusValue(int level) {
     int value = 0;
