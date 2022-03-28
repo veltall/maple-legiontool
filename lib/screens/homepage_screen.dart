@@ -12,12 +12,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List _characters = [];
+  var _legionLevel = 0;
 
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('character.json');
     final data = await json.decode(response);
+    var levels = 0;
+    for (var item in data) {
+      levels += item["level"] as int;
+    }
     setState(() {
       _characters = data;
+      _legionLevel = levels;
     });
   }
 
@@ -27,7 +33,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Character List",
+          "Legion Level: " + _legionLevel.toString(),
           style: Theme.of(context).textTheme.headline5!.copyWith(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,

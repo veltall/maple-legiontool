@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Legion Provider',
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
+        primaryColor: Colors.white,
+        dividerColor: Colors.grey.shade300,
+        useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),

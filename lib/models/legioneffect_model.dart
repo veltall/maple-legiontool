@@ -63,6 +63,9 @@ class LegionEffect extends StatelessWidget {
               defaultColumnWidth: const FixedColumnWidth(40),
               children: [
                 TableRow(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColorLight,
+                  ),
                   children: bonusValues.map((bv) {
                     return Text(
                       bv.toString() + bonusUnit,

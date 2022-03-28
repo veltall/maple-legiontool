@@ -9,7 +9,20 @@
     "mega": true,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Invincible Belief",
+      "job": "Hero",
+      "desc": "Automatically activates when your health falls to 15% of your Max HP or below. Restores 35% of Max HP every 1 sec for 3 sec\nCooldown: 210 sec.",
+      "bonuses": [
+        {
+          "stat": "HP Recovery",
+          "desc": "Restores HP every 1 sec for 3 sec",
+          "values": [20, 23, 26, 29, 32, 35],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Paladin",
@@ -21,7 +34,20 @@
     "mega": false,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Invincible Belief",
+      "job": "Paladin",
+      "desc": "Automatically activates when your health falls to 15% of your Max HP or below. Restores 35% of Max HP every 1 sec for 3 sec\nCooldown: 210 sec.",
+      "bonuses": [
+        {
+          "stat": "HP Recovery",
+          "desc": "Restores HP every 1 sec for 3 sec",
+          "values": [20, 23, 26, 29, 32, 35],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Dark Knight",
@@ -33,7 +59,20 @@
     "mega": false,
     "bonusStat": "HP",
     "bonusValues": [2, 3, 4, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Invincible Belief",
+      "job": "Dark Knight",
+      "desc": "Automatically activates when your health falls to 15% of your Max HP or below. Restores 35% of Max HP every 1 sec for 3 sec\nCooldown: 210 sec.",
+      "bonuses": [
+        {
+          "stat": "HP Recovery",
+          "desc": "Restores HP every 1 sec for 3 sec",
+          "values": [20, 23, 26, 29, 32, 35],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Magician (Fire, Poison)",
@@ -46,7 +85,26 @@
     "mega": false,
     "bonusStat": "MP",
     "bonusValues": [2, 3, 4, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Empirical Knowledge",
+      "job": "Magician (Fire, Poison)",
+      "desc": "When attacking, has a 25% chance to identify the weakness of the enemy with the highest Max HP among those struck, granting you the following bonuses against them:\nDamage per Stack: +3%, Enemy DEF Ignored per Stack: +3%\nEffect Duration: 10 sec, Stacks up to 3 times",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "Damage per Stack: +x%, up to 3 Stacks.",
+          "values": [1, 1, 2, 2, 3, 3],
+          "unit": "%"
+        },
+        {
+          "stat": "IED",
+          "desc": "Enemy DEF Ignored y% per Stack, up to 3 Stacks",
+          "values": [1, 1, 2, 2, 3, 3],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Magician (Ice, Lightning)",
@@ -59,7 +117,26 @@
     "mega": false,
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Empirical Knowledge",
+      "job": "Magician (Ice, Lightning)",
+      "desc": "When attacking, has a 25% chance to identify the weakness of the enemy with the highest Max HP among those struck, granting you the following bonuses against them:\nDamage per Stack: +3%, Enemy DEF Ignored per Stack: +3%\nEffect Duration: 10 sec, Stacks up to 3 times",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "Damage per Stack: +x%, up to 3 Stacks.",
+          "values": [1, 1, 2, 2, 3, 3],
+          "unit": "%"
+        },
+        {
+          "stat": "IED",
+          "desc": "Enemy DEF Ignored y% per Stack, up to 3 Stacks",
+          "values": [1, 1, 2, 2, 3, 3],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Bishop",
@@ -71,7 +148,26 @@
     "mega": false,
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Empirical Knowledge",
+      "job": "Bishop",
+      "desc": "When attacking, has a 25% chance to identify the weakness of the enemy with the highest Max HP among those struck, granting you the following bonuses against them:\nDamage per Stack: +3%, Enemy DEF Ignored per Stack: +3%\nEffect Duration: 10 sec, Stacks up to 3 times",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "Damage per Stack: +x%, up to 3 Stacks.",
+          "values": [1, 1, 2, 2, 3, 3],
+          "unit": "%"
+        },
+        {
+          "stat": "IED",
+          "desc": "Enemy DEF Ignored y% per Stack, up to 3 Stacks",
+          "values": [1, 1, 2, 2, 3, 3],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Bowmaster",
@@ -83,7 +179,26 @@
     "mega": true,
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Adventurer's Curiosity",
+      "job": "Bowmaster",
+      "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
+      "bonuses": [
+        {
+          "stat": "Monster Collection chance",
+          "desc": "",
+          "values": [10, 15, 20, 25, 30, 35],
+          "unit": "%"
+        },
+        {
+          "stat": "Critical Hit Rate",
+          "desc": "",
+          "values": [3, 4, 6, 7, 9, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Marksman",
@@ -95,7 +210,26 @@
     "mega": true,
     "bonusStat": "Critical Hit Rate",
     "bonusValues": [1, 2, 3, 4, 5],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Adventurer's Curiosity",
+      "job": "Marksman",
+      "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
+      "bonuses": [
+        {
+          "stat": "Monster Collection chance",
+          "desc": "",
+          "values": [10, 15, 20, 25, 30, 35],
+          "unit": "%"
+        },
+        {
+          "stat": "Critical Hit Rate",
+          "desc": "",
+          "values": [3, 4, 6, 7, 9, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Pathfinder",
@@ -107,7 +241,26 @@
     "mega": false,
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Adventurer's Curiosity",
+      "job": "Pathfinder",
+      "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
+      "bonuses": [
+        {
+          "stat": "Monster Collection chance",
+          "desc": "",
+          "values": [10, 15, 20, 25, 30, 35],
+          "unit": "%"
+        },
+        {
+          "stat": "Critical Hit Rate",
+          "desc": "",
+          "values": [3, 4, 6, 7, 9, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Night Lord",
@@ -119,7 +272,20 @@
     "mega": false,
     "bonusStat": "Critical Hit Rate",
     "bonusValues": [1, 2, 3, 4, 5],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Thief's Cunning",
+      "job": "Night Lord",
+      "desc": "Upon debuffing an enemy, Damage: +18%. Duration: 10 sec\nCooldown: 20 sec.",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [3, 6, 9, 12, 15, 18],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Shadower",
@@ -131,7 +297,20 @@
     "mega": false,
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Thief's Cunning",
+      "job": "Shadower",
+      "desc": "Upon debuffing an enemy, Damage: +18%. Duration: 10 sec\nCooldown: 20 sec.",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [3, 6, 9, 12, 15, 18],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Dual Blade",
@@ -143,7 +322,20 @@
     "mega": false,
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Thief's Cunning",
+      "job": "Dual Blade",
+      "desc": "Upon debuffing an enemy, Damage: +18%. Duration: 10 sec\nCooldown: 20 sec.",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [3, 6, 9, 12, 15, 18],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Buccaneer",
@@ -155,7 +347,26 @@
     "mega": false,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Pirate Blessing",
+      "job": "Buccaneer",
+      "desc": "STR: +70, DEX: +70, INT: +70, LUK: +70, Max HP: +1225, Max MP: +1225\nDamage Taken: -15%",
+      "bonuses": [
+        {
+          "stat": "All stats",
+          "desc": "",
+          "values": [20, 30, 40, 50, 60, 70],
+          "unit": ""
+        },
+        {
+          "stat": "Damage Taken reduction",
+          "desc": "",
+          "values": [5, 7, 9, 11, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Corsair",
@@ -167,7 +378,26 @@
     "mega": false,
     "bonusStat": "Summon Duration",
     "bonusValues": [4, 6, 8, 10, 12],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Pirate Blessing",
+      "job": "Buccaneer",
+      "desc": "STR: +70, DEX: +70, INT: +70, LUK: +70, Max HP: +1225, Max MP: +1225\nDamage Taken: -15%",
+      "bonuses": [
+        {
+          "stat": "All stats",
+          "desc": "",
+          "values": [20, 30, 40, 50, 60, 70],
+          "unit": ""
+        },
+        {
+          "stat": "Damage Taken reduction",
+          "desc": "",
+          "values": [5, 7, 9, 11, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Cannoneer",
@@ -179,7 +409,26 @@
     "mega": false,
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Pirate Blessing",
+      "job": "Buccaneer",
+      "desc": "STR: +70, DEX: +70, INT: +70, LUK: +70, Max HP: +1225, Max MP: +1225\nDamage Taken: -15%",
+      "bonuses": [
+        {
+          "stat": "All stats",
+          "desc": "",
+          "values": [20, 30, 40, 50, 60, 70],
+          "unit": ""
+        },
+        {
+          "stat": "Damage Taken reduction",
+          "desc": "",
+          "values": [5, 7, 9, 11, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Dawn Warrior",
@@ -190,7 +439,32 @@
     "secondaryColor": "#daa27e",
     "bonusStat": "MaxHP",
     "bonusValues": [250, 500, 1000, 2000, 2500],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Cygnus Blessing",
+      "job": "Dawn Warrior",
+      "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
+      "bonuses": [
+        {
+          "stat": "ATT/MATT",
+          "desc": "",
+          "values": [7, 9, 11, 13, 15, 17, 19, 21, 23, 25],
+          "unit": ""
+        },
+        {
+          "stat": "Abnormal Status Resistance",
+          "desc": "",
+          "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": ""
+        },
+        {
+          "stat": "Elemental Resistance",
+          "desc": "",
+          "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Blaze Wizard",
@@ -201,7 +475,32 @@
     "secondaryColor": "#f1583e",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Cygnus Blessing",
+      "job": "Blaze Wizard",
+      "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
+      "bonuses": [
+        {
+          "stat": "ATT/MATT",
+          "desc": "",
+          "values": [7, 9, 11, 13, 15, 17, 19, 21, 23, 25],
+          "unit": ""
+        },
+        {
+          "stat": "Abnormal Status Resistance",
+          "desc": "",
+          "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": ""
+        },
+        {
+          "stat": "Elemental Resistance",
+          "desc": "",
+          "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Wind Archer",
@@ -212,7 +511,32 @@
     "secondaryColor": "#78c39b",
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Cygnus Blessing",
+      "job": "Wind Archer",
+      "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
+      "bonuses": [
+        {
+          "stat": "ATT/MATT",
+          "desc": "",
+          "values": [7, 9, 11, 13, 15, 17, 19, 21, 23, 25],
+          "unit": ""
+        },
+        {
+          "stat": "Abnormal Status Resistance",
+          "desc": "",
+          "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": ""
+        },
+        {
+          "stat": "Elemental Resistance",
+          "desc": "",
+          "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Night Walker",
@@ -223,7 +547,32 @@
     "secondaryColor": "#242732",
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Cygnus Blessing",
+      "job": "Night Walker",
+      "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
+      "bonuses": [
+        {
+          "stat": "ATT/MATT",
+          "desc": "",
+          "values": [7, 9, 11, 13, 15, 17, 19, 21, 23, 25],
+          "unit": ""
+        },
+        {
+          "stat": "Abnormal Status Resistance",
+          "desc": "",
+          "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": ""
+        },
+        {
+          "stat": "Elemental Resistance",
+          "desc": "",
+          "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Thunder Breaker",
@@ -234,7 +583,32 @@
     "secondaryColor": "#1885f2",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Cygnus Blessing",
+      "job": "Thunder Breaker",
+      "desc": "Attack Power and Magic ATT: +25, Abnormal Status Resistance: +15, All Elemental Resistance: +15%",
+      "bonuses": [
+        {
+          "stat": "ATT/MATT",
+          "desc": "",
+          "values": [7, 9, 11, 13, 15, 17, 19, 21, 23, 25],
+          "unit": ""
+        },
+        {
+          "stat": "Abnormal Status Resistance",
+          "desc": "",
+          "values": [2, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": ""
+        },
+        {
+          "stat": "Elemental Resistance",
+          "desc": "",
+          "values": [1, 3, 4, 6, 7, 9, 10, 12, 13, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Mihile",
@@ -245,7 +619,20 @@
     "secondaryColor": "#752c2b",
     "bonusStat": "MaxHP",
     "bonusValues": [250, 500, 1000, 2000, 2500],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Knight's Watch",
+      "job": "Mihile",
+      "desc": "Knockback Resistance Chance: +100%, Duration: 220 sec. (Cooldown: 180 sec)",
+      "bonuses": [
+        {
+          "stat": "Knockback Resistance duration",
+          "desc": "",
+          "values": [140, 180, 220],
+          "unit": "seconds"
+        }
+      ]
+    }
   },
   {
     "name": "Aran",
@@ -256,7 +643,20 @@
     "secondaryColor": "#69c3d9",
     "bonusStat": "HP Recovery",
     "bonusValues": [2, 4, 6, 8, 10],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Combo Kill Blessing",
+      "job": "Aran",
+      "desc": "Combo Kill Marble EXP: +900% (permanently)",
+      "bonuses": [
+        {
+          "stat": "Orb EXP Bonus",
+          "desc": "",
+          "values": [400, 650, 900],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Evan",
@@ -267,7 +667,20 @@
     "secondaryColor": "#df403c",
     "bonusStat": "MP Recovery",
     "bonusValues": [2, 4, 6, 8, 10],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Rune Persistence",
+      "job": "Evan",
+      "desc": "Rune Duration: +70%",
+      "bonuses": [
+        {
+          "stat": "Rune Duration",
+          "desc": "",
+          "values": [30, 50, 70],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Mercedes",
@@ -278,7 +691,20 @@
     "secondaryColor": "#709d4c",
     "bonusStat": "Cooldown Reduction",
     "bonusValues": [2, 3, 4, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Elven Blessing",
+      "job": "Mercedes",
+      "desc": "Permanently receive 20% additional EXP",
+      "bonuses": [
+        {
+          "stat": "Bonus EXP",
+          "desc": "",
+          "values": [10, 15, 20],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Phantom",
@@ -289,7 +715,20 @@
     "secondaryColor": "#f8db68",
     "bonusStat": "Meso Obtained",
     "bonusValues": [1, 2, 3, 4, 5],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Phantom Instinct",
+      "job": "Phantom",
+      "desc": "Critical Rate +20%",
+      "bonuses": [
+        {
+          "stat": "Bonus EXP",
+          "desc": "",
+          "values": [10, 15, 20],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Shade",
@@ -300,7 +739,20 @@
     "secondaryColor": "#4b4346",
     "bonusStat": "Critical Damage",
     "bonusValues": [1, 2, 3, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Close Call",
+      "job": "Shade",
+      "desc": "Fatal Attack Survival Chance: 10%",
+      "bonuses": [
+        {
+          "stat": "Cheat chance",
+          "desc": "",
+          "values": [5, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Luminous",
@@ -311,7 +763,20 @@
     "secondaryColor": "#38384e",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Light Wash",
+      "job": "Luminous",
+      "desc": "20% of enemy DEF ignored",
+      "bonuses": [
+        {
+          "stat": "IED",
+          "desc": "",
+          "values": [10, 15, 20],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Demon Slayer",
@@ -322,7 +787,20 @@
     "secondaryColor": "#141213",
     "bonusStat": "Status Resistance",
     "bonusValues": [1, 2, 3, 4, 5],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Fury Unleashed",
+      "job": "Demon Slayer",
+      "desc": "When attacking Boss Monster- Damage: +20%,",
+      "bonuses": [
+        {
+          "stat": "Boss Damage",
+          "desc": "",
+          "values": [10, 15, 20],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Demon Avenger",
@@ -333,7 +811,20 @@
     "secondaryColor": "#910c2e",
     "bonusStat": "Boss Damage",
     "bonusValues": [1, 2, 3, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Wild Rage",
+      "job": "Demon Avenger",
+      "desc": "Damage: +15%",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [5, 10, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Blaster",
@@ -344,7 +835,20 @@
     "secondaryColor": "#2d222e",
     "bonusStat": "IED",
     "bonusValues": [1, 2, 3, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Spirit of Freedom",
+      "job": "Blaster",
+      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "bonuses": [
+        {
+          "stat": "Invincibility Duration",
+          "desc": "",
+          "values": [1, 2, 3, 4, 5, 6, 7, 8],
+          "unit": "seconds"
+        }
+      ]
+    }
   },
   {
     "name": "Battle Mage",
@@ -355,7 +859,20 @@
     "secondaryColor": "#30246a",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Spirit of Freedom",
+      "job": "Battle Mage",
+      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "bonuses": [
+        {
+          "stat": "Invincibility Duration",
+          "desc": "",
+          "values": [1, 2, 3, 4, 5, 6, 7, 8],
+          "unit": "seconds"
+        }
+      ]
+    }
   },
   {
     "name": "Wild Hunter",
@@ -366,7 +883,20 @@
     "secondaryColor": "#1e1a25",
     "bonusStat": "Mob Damage",
     "bonusValues": [4, 8, 12, 16, 20],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Spirit of Freedom",
+      "job": "Wild Hunter",
+      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "bonuses": [
+        {
+          "stat": "Invincibility Duration",
+          "desc": "",
+          "values": [1, 2, 3, 4, 5, 6, 7, 8],
+          "unit": "seconds"
+        }
+      ]
+    }
   },
   {
     "name": "Mechanic",
@@ -377,7 +907,20 @@
     "secondaryColor": "#e6a64a",
     "bonusStat": "Buff Duration",
     "bonusValues": [5, 10, 15, 20, 25],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Spirit of Freedom",
+      "job": "Mechanic",
+      "desc": "Grants 8 seconds of invincibility after being revived. Removed upon moving to another map",
+      "bonuses": [
+        {
+          "stat": "Invincibility Duration",
+          "desc": "",
+          "values": [1, 2, 3, 4, 5, 6, 7, 8],
+          "unit": "seconds"
+        }
+      ]
+    }
   },
   {
     "name": "Xenon",
@@ -388,7 +931,20 @@
     "secondaryColor": "#caab55",
     "bonusStat": "STR/DEX/LUK",
     "bonusValues": [5, 10, 20, 40, 50],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Hybrid Logic",
+      "job": "Xenon",
+      "desc": "All Stats: +10%",
+      "bonuses": [
+        {
+          "stat": "All stats",
+          "desc": "",
+          "values": [5, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Hayato",
@@ -399,7 +955,26 @@
     "secondaryColor": "#d49444",
     "bonusStat": "Critical Damage",
     "bonusValues": [1, 2, 3, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Keen Edge",
+      "job": "Hayato",
+      "desc": "All Stats: 25, Attack Power Increase: 15, Magic Attack Power Increase: 15",
+      "bonuses": [
+        {
+          "stat": "All stats",
+          "desc": "",
+          "values": [15, 25],
+          "unit": ""
+        },
+        {
+          "stat": "ATT/MATT",
+          "desc": "",
+          "values": [10, 15],
+          "unit": ""
+        }
+      ]
+    }
   },
   {
     "name": "Kanna",
@@ -410,7 +985,20 @@
     "secondaryColor": "#7461bc",
     "bonusStat": "Boss Damage",
     "bonusValues": [1, 2, 3, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Elementalism",
+      "job": "Kanna",
+      "desc": "Permanent Damage Increase: 10%",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [5, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Kaiser",
@@ -421,7 +1009,20 @@
     "secondaryColor": "#261421",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Iron Will",
+      "job": "Kaiser",
+      "desc": "Max HP: +20%",
+      "bonuses": [
+        {
+          "stat": "Max HP",
+          "desc": "",
+          "values": [10, 15, 20],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Kain",
@@ -432,7 +1033,20 @@
     "secondaryColor": "#262422",
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Time to Prepare",
+      "job": "Kain",
+      "desc": "After completing Time to Prepare at least 1 time, then upon either defeating 8 enemies or attacking a boss 5 times, damage increases by 17% for 20 sec, for every 5 times you've stacked Time to Prepare.\nCooldown: 40 sec",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [9, 17],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Cadena",
@@ -443,7 +1057,26 @@
     "secondaryColor": "#2f372c",
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Unfair Advantage",
+      "job": "Cadena",
+      "desc": "Attacks against weaker opponents deal +6% damage. Attacks against monsters afflicted by Abnormal Statuses deal +6% damage.",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "Applies to enemies at lower levels",
+          "values": [3, 6],
+          "unit": "%"
+        },
+        {
+          "stat": "Damage",
+          "desc": "Applies to enemies afflicted with Abnormal Status Effects",
+          "values": [3, 6],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Angelic Buster",
@@ -454,7 +1087,20 @@
     "secondaryColor": "#91344f",
     "bonusStat": "DEX",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Terms and Conditions",
+      "job": "Angelic Buster",
+      "desc": "+120% skill damage for 10 sec when active.\nCooldown: 90 sec. Skill effects reduced to half when used with link skill.",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [60, 90, 120],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Adele",
@@ -465,7 +1111,20 @@
     "secondaryColor": "#5b94cf",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Noble Fire",
+      "job": "Adele",
+      "desc": "Boss Damage: +4%.\nIncreases damage by 2% up to 8% for each party member, including yourself, on the same map.\nIf you are not in a party, you will be considered to be in your own party.",
+      "bonuses": [
+        {
+          "stat": "Boss Damage",
+          "desc": "At max party size, +12% Boss Damage",
+          "values": [3, 6],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Illium",
@@ -476,7 +1135,20 @@
     "secondaryColor": "#404478",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Tide of Battle",
+      "job": "Illium",
+      "desc": "Activated when moving a certain distance. Max number of stacks: 6 times, Duration: 5 sec, Damage per stack: +2%",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [5, 10],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Ark",
@@ -487,7 +1159,20 @@
     "secondaryColor": "#361d21",
     "bonusStat": "STR",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Solus",
+      "job": "Ark",
+      "desc": "Activates when the combat state continues for 5 sec. Can be stacked a max of 5 times. Duration: 5 sec.\nWhen activated, damage increases by 1%, and damage increases an extra 3% per stack",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [6, 11, 16],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Lara",
@@ -498,7 +1183,26 @@
     "secondaryColor": "#59d7fd",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Nature's Friend",
+      "job": "Lara",
+      "desc": "Damage: +5%.\nActivate nature's help upon defeating 20 normal monsters. Increases Damage Against Normal Monsters by 11% for 30 sec. when nature's help is active.\nCooldown: 30 sec.",
+      "bonuses": [
+        {
+          "stat": "Damage",
+          "desc": "",
+          "values": [3, 5],
+          "unit": "%"
+        },
+        {
+          "stat": "Mob Damage",
+          "desc": "",
+          "values": [7, 11],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Hoyoung",
@@ -509,7 +1213,26 @@
     "secondaryColor": "#76ccd8",
     "bonusStat": "LUK",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Bravado",
+      "job": "Hoyoung",
+      "desc": "Enemy DEF Ignored: +10%, Damage: +14% against enemies with 100% HP",
+      "bonuses": [
+        {
+          "stat": "IED",
+          "desc": "",
+          "values": [5, 10],
+          "unit": "%"
+        },
+        {
+          "stat": "Damage",
+          "desc": "Applies to enemies at full HP",
+          "values": [9, 14],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Zero",
@@ -520,7 +1243,26 @@
     "secondaryColor": "#bb232b",
     "bonusStat": "EXP",
     "bonusValues": [4, 6, 8, 10, 12],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Rhinne's Blessing",
+      "job": "Zero",
+      "desc": "Incoming damage reduced: 15%. Defense ignored: 10%",
+      "bonuses": [
+        {
+          "stat": "IED",
+          "desc": "",
+          "values": [2, 4, 6, 8, 10],
+          "unit": "%"
+        },
+        {
+          "stat": "Damage Taken Reduction",
+          "desc": "",
+          "values": [3, 6, 9, 12, 15],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Kinesis",
@@ -531,7 +1273,20 @@
     "secondaryColor": "#0b0d0f",
     "bonusStat": "INT",
     "bonusValues": [10, 20, 40, 80, 100],
-    "unit": ""
+    "unit": "",
+    "linkSkill": {
+      "name": "Judgment",
+      "job": "Kinesis",
+      "desc": "Critical Damage: +4%",
+      "bonuses": [
+        {
+          "stat": "Critical Damage",
+          "desc": "",
+          "values": [2, 4],
+          "unit": "%"
+        }
+      ]
+    }
   },
   {
     "name": "Beast Tamer",
@@ -542,6 +1297,31 @@
     "secondaryColor": "#7ab25d",
     "bonusStat": "IED",
     "bonusValues": [1, 2, 3, 5, 6],
-    "unit": "%"
+    "unit": "%",
+    "linkSkill": {
+      "name": "Focus Spirit",
+      "job": "Beast Tamer",
+      "desc": "Boss Damage: +10%.\nCritical Rate: +10%.\nMax HP/MP +5%.",
+      "bonuses": [
+        {
+          "stat": "Boss Damage",
+          "desc": "",
+          "values": [4, 7, 10],
+          "unit": "%"
+        },
+        {
+          "stat": "Critical Hit Rate",
+          "desc": "",
+          "values": [4, 7, 10],
+          "unit": "%"
+        },
+        {
+          "stat": "Max HP/MP",
+          "desc": "",
+          "values": [3, 4, 5],
+          "unit": "%"
+        }
+      ]
+    }
   }
 ]
