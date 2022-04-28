@@ -43,12 +43,15 @@ class LinkSkill extends StatelessWidget {
   }
 
   String parseImageURL() {
-    String url = "./img/" + name.replaceAll(' ', '') + ".webp";
+    String url = "assets/img/" + name.replaceAll(' ', '') + ".webp";
     return url;
   }
 
   @override
   Widget build(BuildContext context) {
+    TextStyle fs = Theme.of(context).textTheme.subtitle1!.copyWith(
+          fontSize: 12,
+        );
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -77,22 +80,33 @@ class LinkSkill extends StatelessWidget {
                       return Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(b.stat),
+                          Text(b.stat, style: fs),
                           Table(
-                            defaultColumnWidth: const FixedColumnWidth(35),
+                            defaultColumnWidth: const FixedColumnWidth(40),
                             border: TableBorder.symmetric(
                               inside: const BorderSide(),
                             ),
                             children: [
                               TableRow(
-                                children: b.values.map((v) {
-                                  return Flexible(
-                                    child: Text(
-                                      v.toString() + b.unit,
-                                      textAlign: TextAlign.center,
-                                    ),
-                                  );
-                                }).toList(),
+                                children: b.values
+                                    .asMap()
+                                    .map((i, v) {
+                                      MapEntry<int, Text> m =
+                                          const MapEntry(0, Text("..."));
+                                      if (b.values.length - i < 6) {
+                                        m = MapEntry(
+                                          i,
+                                          Text(
+                                            v.toString() + b.unit,
+                                            style: fs,
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        );
+                                      }
+                                      return m;
+                                    })
+                                    .values
+                                    .toList(),
                               )
                             ],
                           ),

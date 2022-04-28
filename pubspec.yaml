@@ -37,6 +37,7 @@ dependencies:
   flip_card: ^0.6.0
   provider: ^6.0.2
   simple_shadow: ^0.3.0
+  flutter_riverpod: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +63,85 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/character.json
-    # - images/a_dot_burr.jpeg
+    - assets/img/Hero.webp
+    - assets/img/Paladin.webp
+    - assets/img/DarkKnight.webp
+    - assets/img/Magician(Fire,Poison).webp
+    - assets/img/Magician(Ice,Lightning).webp
+    - assets/img/Bishop.webp
+    - assets/img/Marksman.webp
+    - assets/img/Pathfinder.webp
+    - assets/img/Bowmaster.webp
+    - assets/img/NightLord.webp
+    - assets/img/Shadower.webp
+    - assets/img/DualBlade.webp
+    - assets/img/Buccaneer.webp
+    - assets/img/Corsair.webp
+    - assets/img/Cannoneer.webp
+    - assets/img/DawnWarrior.webp
+    - assets/img/BlazeWizard.webp
+    - assets/img/WindArcher.webp
+    - assets/img/NightWalker.webp
+    - assets/img/ThunderBreaker.webp
+    - assets/img/Mihile.webp
+    - assets/img/Aran.webp
+    - assets/img/Evan.webp
+    - assets/img/Mercedes.webp
+    - assets/img/Phantom.webp
+    - assets/img/Shade.webp
+    - assets/img/Luminous.webp
+    - assets/img/DemonSlayer.webp
+    - assets/img/DemonAvenger.webp
+    - assets/img/Blaster.webp
+    - assets/img/BattleMage.webp
+    - assets/img/WildHunter.webp
+    - assets/img/Mechanic.webp
+    - assets/img/Xenon.webp
+    - assets/img/Hayato.webp
+    - assets/img/Kanna.webp
+    - assets/img/Kaiser.webp
+    - assets/img/Kain.webp
+    - assets/img/Cadena.webp
+    - assets/img/AngelicBuster.webp
+    - assets/img/Adele.webp
+    - assets/img/Illium.webp
+    - assets/img/Ark.webp
+    - assets/img/Lara.webp
+    - assets/img/Hoyoung.webp
+    - assets/img/Zero.webp
+    - assets/img/Kinesis.webp
+    - assets/img/BeastTamer.webp
+    - assets/img/InvincibleBelief.webp
+    - assets/img/EmpiricalKnowledge.webp
+    - assets/img/Adventurer'sCuriosity.webp
+    - assets/img/Thief'sCunning.webp
+    - assets/img/PirateBlessing.webp
+    - assets/img/CygnusBlessing.webp
+    - assets/img/Knight'sWatch.webp
+    - assets/img/ComboKillBlessing.webp
+    - assets/img/RunePersistence.webp
+    - assets/img/ElvenBlessing.webp
+    - assets/img/PhantomInstinct.webp
+    - assets/img/CloseCall.webp
+    - assets/img/LightWash.webp
+    - assets/img/WildRage.webp
+    - assets/img/SpiritofFreedom.webp
+    - assets/img/FuryUnleashed.webp
+    - assets/img/HybridLogic.webp
+    - assets/img/KeenEdge.webp
+    - assets/img/Elementalism.webp
+    - assets/img/IronWill.webp
+    - assets/img/TimetoPrepare.webp
+    - assets/img/UnfairAdvantage.webp
+    - assets/img/TermsandConditions.webp
+    - assets/img/NobleFire.webp
+    - assets/img/TideofBattle.webp
+    - assets/img/Solus.webp
+    - assets/img/Nature'sFriend.webp
+    - assets/img/Bravado.webp
+    - assets/img/Rhinne'sBlessing.webp
+    - assets/img/Judgment.webp
+    - assets/img/FocusSpirit.webp
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

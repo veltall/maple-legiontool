@@ -1,14 +1,18 @@
+// ignore_for_file: unused_import
+
 import 'dart:convert';
 import 'dart:math';
 import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:legionprovider/models/legioneffect_model.dart';
 import 'package:simple_shadow/simple_shadow.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:legionprovider/models/legioneffect_model.dart';
 import 'package:legionprovider/models/linkskill_model.dart';
+import 'package:legionprovider/models/utilities.dart';
 
-class Character extends StatefulWidget {
+class Character extends StateNotifier<String> {
   final String name;
   final String? shortName;
   final int level;
@@ -18,6 +22,7 @@ class Character extends StatefulWidget {
   final bool isTera;
   final bool isMega;
   final LinkSkill linkSkill;
+  final Map<String, dynamic> mapData;
 
   Character({
     Key? key,
@@ -25,11 +30,12 @@ class Character extends StatefulWidget {
     required this.shortName,
     required this.level,
     required this.linkSkill,
+    required this.mapData,
     this.pcolor = "#ffffff",
     this.scolor = "#000000",
     this.isMega = false,
     this.isTera = false,
-  }) : super(key: key) {
+  }) : super('') {
     _imgurl = parseImgURL();
   }
 
@@ -43,6 +49,7 @@ class Character extends StatefulWidget {
       scolor: other.scolor,
       isMega: other.isMega,
       isTera: other.isTera,
+      mapData: other.mapData,
     );
   }
 
@@ -55,7 +62,6 @@ class Character extends StatefulWidget {
     final _tera = data['tera'] as bool;
     final _mega = data['mega'] as bool;
     final linkMap = data['linkSkill'] as Map<String, dynamic>;
-    // final Map<String, dynamic> linkMap = {};
     final linkSkill = LinkSkill.fromMap(linkMap);
     return Character(
       name: name,
@@ -66,63 +72,53 @@ class Character extends StatefulWidget {
       scolor: _scolor,
       isMega: _mega,
       isTera: _tera,
+      mapData: data,
     );
   }
-
-  // int calculateBonusValue() {
-  //   return legionEffect.calculateBonusValue(level);
-  // }
 
   String parseImgURL() {
-    String url = "./img/" + name.replaceAll(' ', '') + ".webp";
+    String url = "assets/img/" + name.replaceAll(' ', '') + ".webp";
     return url;
   }
-
-  @override
-  State<Character> createState() => _CharacterState();
 }
 
-class _CharacterState extends State<Character> {
-  Map<String, dynamic> characterMap = {};
-  late FlipCardController _controller;
-
-  Map<String, dynamic> toMap() {
-    return {
-      'name': widget.name,
-      if (widget.shortName != null) 'shortName': widget.shortName,
-      'level': widget.level,
-    };
-  }
-
-  Future<void> readLegionJson() async {
-    final String response = await rootBundle.loadString('character.json');
-    final data = await json.decode(response);
-    setState(() {
-      characterMap = data.firstWhere((char) {
-        return char["name"] == widget.name;
-      });
-    });
-  }
+class CharacterCard extends ConsumerWidget {
+  final Character char;
+  const CharacterCard({Key? key, required this.char}) : super(key: key);
 
   @override
-  void initState() {
-    super.initState();
-    readLegionJson();
-    _controller = FlipCardController();
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return FlipCard(
-      controller: _controller,
-      flipOnTouch: false,
+      flipOnTouch: true,
       direction: FlipDirection.VERTICAL,
-      front: _buildRear(context),
-      back: _buildFront(context),
+      front: CharacterCardFrontSide(
+        char: char,
+      ),
+      back: SizedBox(
+        height: 205,
+        child: GradientBackground(
+          char: char,
+          child: Stack(
+            children: [
+              CharacterInfoTitleBar(title: char.linkSkill.name),
+              char.linkSkill,
+              HeroImage(char: char, option: 'link'),
+            ],
+          ),
+        ),
+      ),
     );
   }
+}
 
-  Widget _buildFront(BuildContext context) {
+class GradientBackground extends ConsumerWidget {
+  final Character char;
+  final Widget child;
+  const GradientBackground({Key? key, required this.char, required this.child})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       key: const ValueKey(true),
       decoration: BoxDecoration(
@@ -130,57 +126,47 @@ class _CharacterState extends State<Character> {
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
           colors: [
-            hexToColor(widget.pcolor),
-            hexToColor(widget.scolor),
+            Utilities.hexToColor(char.pcolor),
+            Utilities.hexToColor(char.scolor),
           ],
           transform: const GradientRotation(135 * pi / 180),
         ),
       ),
-      constraints: const BoxConstraints(maxHeight: 200),
+      constraints: const BoxConstraints(maxHeight: 205),
       padding: const EdgeInsets.all(4),
+      child: child,
+    );
+  }
+}
+
+class CharacterCardFrontSide extends ConsumerWidget {
+  final Character char;
+  const CharacterCardFrontSide({Key? key, required this.char})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return GradientBackground(
+      char: char,
       child: Stack(
         children: [
-          buildCharacterInfo(),
-          buildHeroImage("legion"),
+          CharacterInfoWidget(char: char),
+          HeroImage(char: char, option: "legion"),
         ],
       ),
     );
   }
+}
 
-  Widget _buildRear(BuildContext context) {
-    return Container(
-      key: const ValueKey(true),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [
-            hexToColor(widget.pcolor),
-            hexToColor(widget.scolor),
-          ],
-          transform: const GradientRotation(135 * pi / 180),
-        ),
-      ),
-      constraints: const BoxConstraints(maxHeight: 200),
-      padding: const EdgeInsets.all(4),
-      child: Stack(
-        children: [
-          buildTitleBar(title: widget.linkSkill.name),
-          widget.linkSkill,
-          buildHeroImage("link"),
-        ],
-      ),
-    );
-  }
+class CharacterInfoWidget extends ConsumerWidget {
+  final Character char;
+  const CharacterInfoWidget({Key? key, required this.char}) : super(key: key);
 
-  /// Construct a color from a hex code string, of the format #RRGGBB.
-  Color hexToColor(String code) {
-    return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
-  }
-
-  Widget buildCharacterInfo() {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     final String cardTitle =
-        (widget.shortName != null) ? widget.shortName.toString() : widget.name;
+        (char.shortName != null) ? char.shortName.toString() : char.name;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -188,22 +174,29 @@ class _CharacterState extends State<Character> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildTitleBar(title: cardTitle),
-            buildStatusBar(),
+            CharacterInfoTitleBar(title: cardTitle),
+            CharacterCardStatusBar(char: char),
           ],
         ),
-        // const Spacer(),
-        buildCTAButton(),
-        (characterMap["name"] != null)
-            ? LegionEffect.fromMap(characterMap)
+        const Spacer(),
+        CharacterCardCTAButton(char: char),
+        (char.mapData["name"] != null)
+            ? LegionEffect.fromMap(char.mapData)
             : const RefreshProgressIndicator(
                 value: null,
               ),
       ],
     );
   }
+}
 
-  Widget buildTitleBar({required String title}) {
+class CharacterInfoTitleBar extends ConsumerWidget {
+  final String title;
+  const CharacterInfoTitleBar({Key? key, required this.title})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: Row(
@@ -221,63 +214,40 @@ class _CharacterState extends State<Character> {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          buildCardFlipIconButton(),
+          const CardFlipIconButton(),
         ],
       ),
     );
   }
+}
 
-  Widget buildStatusBar() {
+class CharacterCardStatusBar extends ConsumerWidget {
+  final Character char;
+  const CharacterCardStatusBar({Key? key, required this.char})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       children: [
-        widget.isTera
+        char.isTera
             ? const BurningIcon(burningType: 'tera')
             : const SizedBox(height: 30),
-        widget.isMega
+        char.isMega
             ? const BurningIcon(burningType: 'mega')
             : const SizedBox(height: 30),
       ],
     );
   }
+}
 
-  Widget buildHeroImage(String option) {
-    Widget img = Container();
-    if (option == "legion") {
-      img = Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          ClipRect(
-            child: Align(
-              alignment: Alignment.topRight,
-              heightFactor: 0.75,
-              child: SimpleShadow(
-                opacity: 0.55,
-                offset: const Offset(-7, 5),
-                sigma: 7,
-                child: Image(
-                  image: AssetImage(widget._imgurl),
-                  height: 210,
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: 4),
-        ],
-      );
-    } else if (option == "link") {
-      img = Align(
-        alignment: const Alignment(0.95, -0.1),
-        child: Image(
-          image: AssetImage(widget.linkSkill.imgurl),
-          height: 50,
-          fit: BoxFit.fill,
-        ),
-      );
-    }
-    return img;
-  }
+class CharacterCardCTAButton extends ConsumerWidget {
+  final Character char;
+  const CharacterCardCTAButton({Key? key, required this.char})
+      : super(key: key);
 
-  Widget buildCTAButton() {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: const EdgeInsets.only(left: 4.0),
       child: ElevatedButton.icon(
@@ -296,7 +266,7 @@ class _CharacterState extends State<Character> {
           color: Theme.of(context).primaryColor,
         ),
         label: Text(
-          "Level " + widget.level.toString(),
+          "Level ${char.level.toString()}",
           style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 color: Theme.of(context).primaryColor,
               ),
@@ -304,18 +274,50 @@ class _CharacterState extends State<Character> {
       ),
     );
   }
+}
 
-  Widget buildCardFlipIconButton() {
-    return Transform.rotate(
-      angle: -90 * pi / 180,
-      child: IconButton(
-        onPressed: () => _controller.toggleCard(),
-        icon: const Icon(
-          Icons.flip_outlined,
-          color: Colors.white,
+class HeroImage extends ConsumerWidget {
+  final Character char;
+  final String option;
+  const HeroImage({Key? key, required this.char, required this.option})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    Widget img = Container();
+    if (option == "legion") {
+      img = Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          ClipRect(
+            child: Align(
+              alignment: Alignment.topRight,
+              heightFactor: 0.75,
+              child: SimpleShadow(
+                opacity: 0.55,
+                offset: const Offset(-7, 5),
+                sigma: 7,
+                child: Image(
+                  image: AssetImage(char._imgurl),
+                  height: 210,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 4),
+        ],
+      );
+    } else if (option == "link") {
+      img = Align(
+        alignment: const Alignment(0.95, -0.1),
+        child: Image(
+          image: AssetImage(char.linkSkill.imgurl),
+          height: 50,
+          fit: BoxFit.fill,
         ),
-      ),
-    );
+      );
+    }
+    return img;
   }
 }
 
@@ -374,3 +376,35 @@ class BurningIcon extends StatelessWidget {
     );
   }
 }
+
+class CardFlipIconButton extends ConsumerWidget {
+  const CardFlipIconButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    // final controllerNotifier = ref.watch(flipControllerProvider.notifier);
+    return Transform.rotate(
+      angle: -90 * pi / 180,
+      child: const Icon(
+        Icons.flip_outlined,
+        color: Colors.white,
+      ),
+    );
+  }
+}
+
+// final flipControllerProvider = StateNotifierProvider((_) {
+//   final FlipCardController _controller = FlipCardController();
+//   return FlipCardControllerProvider(_controller);
+// });
+
+// final currentFlipController =
+//     Provider((ref) => ref.watch(flipControllerProvider));
+
+// class FlipCardControllerProvider extends StateNotifier<FlipCardController> {
+//   FlipCardControllerProvider(FlipCardController state) : super(state);
+
+//   void toggleFlip() {
+//     state.toggleCard();
+//   }
+// }

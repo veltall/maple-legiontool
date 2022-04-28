@@ -193,7 +193,7 @@
       "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
       "bonuses": [
         {
-          "stat": "Mob Collection chance",
+          "stat": "Mob Collection rate",
           "desc": "",
           "values": [10, 15, 20, 25, 30, 35],
           "unit": "%"
@@ -225,7 +225,7 @@
       "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
       "bonuses": [
         {
-          "stat": "Mob Collection chance",
+          "stat": "Mob Collection rate",
           "desc": "",
           "values": [10, 15, 20, 25, 30, 35],
           "unit": "%"
@@ -257,7 +257,7 @@
       "desc": "Chance to add monsters to Monster Collection: +35%, Critical Rate: 10%",
       "bonuses": [
         {
-          "stat": "Mob Collection chance",
+          "stat": "Mob Collection rate",
           "desc": "",
           "values": [10, 15, 20, 25, 30, 35],
           "unit": "%"
@@ -1103,13 +1103,13 @@
       "desc": "Attacks against weaker opponents deal +6% damage. Attacks against monsters afflicted by Abnormal Statuses deal +6% damage.",
       "bonuses": [
         {
-          "stat": "Damage",
+          "stat": "Damage (weaker enemies)",
           "desc": "Applies to enemies at lower levels",
           "values": [3, 6],
           "unit": "%"
         },
         {
-          "stat": "Damage",
+          "stat": "Damage (weakened enemies)",
           "desc": "Applies to enemies afflicted with Abnormal Status Effects",
           "values": [3, 6],
           "unit": "%"
@@ -1240,7 +1240,7 @@
           "unit": "%"
         },
         {
-          "stat": "Mob Damage",
+          "stat": "Normal Enemy Damage",
           "desc": "",
           "values": [7, 11],
           "unit": "%"

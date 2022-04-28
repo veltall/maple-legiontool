@@ -15,7 +15,8 @@ class _HomePageState extends State<HomePage> {
   var _legionLevel = 0;
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('character.json');
+    final String response =
+        await rootBundle.loadString('assets/character.json');
     final data = await json.decode(response);
     var levels = 0;
     for (var item in data) {
@@ -50,8 +51,7 @@ class _HomePageState extends State<HomePage> {
                 final Map<String, dynamic> c = _characters[index];
                 return Column(
                   children: [
-                    Character.fromMap(c),
-                    // if (index < 5 - 1) const SizedBox(height: 24),
+                    CharacterCard(char: Character.fromMap(c)),
                     if (index < _characters.length - 1)
                       const Divider(height: 2),
                   ],
