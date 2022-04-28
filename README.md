@@ -1,16 +1,14 @@
 # legionprovider
 
-A new Flutter project.
+A tool for planning development of MapleStory's Legion/Union feature.
 
-## Getting Started
+## Feature list
 
-This project is a starting point for a Flutter application.
+- Display all Legion / LinkSkill effects
+- Filter view to display only entries of interest
+- Provide sensible default "plans" (e.g. level target, burning choice)
+- Allow customization of "plans"
+- Remove character from view if uninterested
+- Provide various sorted views (by name, group, level, stat type, etc.)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(most features are TODOs)
