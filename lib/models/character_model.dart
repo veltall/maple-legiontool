@@ -88,22 +88,28 @@ class CharacterCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return FlipCard(
-      flipOnTouch: true,
-      direction: FlipDirection.VERTICAL,
-      front: CharacterCardFrontSide(
-        char: char,
-      ),
-      back: SizedBox(
-        height: 205,
-        child: GradientBackground(
+    final size = MediaQuery.of(context).size;
+    final width = min(size.width, 600.0);
+    final height = min(width / 2.5, 600.0);
+    return Container(
+      constraints: const BoxConstraints(maxWidth: 600, minHeight: 205),
+      child: FlipCard(
+        flipOnTouch: true,
+        direction: FlipDirection.VERTICAL,
+        front: CharacterCardFrontSide(
           char: char,
-          child: Stack(
-            children: [
-              CharacterInfoTitleBar(title: char.linkSkill.name),
-              char.linkSkill,
-              HeroImage(char: char, option: 'link'),
-            ],
+        ),
+        back: SizedBox(
+          height: height,
+          child: GradientBackground(
+            char: char,
+            child: Stack(
+              children: [
+                CharacterInfoTitleBar(title: char.linkSkill.name),
+                char.linkSkill,
+                HeroImage(char: char, option: 'link'),
+              ],
+            ),
           ),
         ),
       ),
@@ -180,11 +186,7 @@ class CharacterInfoWidget extends ConsumerWidget {
         ),
         const Spacer(),
         CharacterCardCTAButton(char: char),
-        (char.mapData["name"] != null)
-            ? LegionEffect.fromMap(char.mapData)
-            : const RefreshProgressIndicator(
-                value: null,
-              ),
+        LegionEffect.fromMap(char.mapData),
       ],
     );
   }
