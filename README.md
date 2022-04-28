@@ -12,3 +12,9 @@ A tool for planning development of MapleStory's Legion/Union feature.
 - Provide various sorted views (by name, group, level, stat type, etc.)
 
 (most features are TODOs)
+
+## Sample screens
+
+![](https://i.imgur.com/KzanQWi.png)
+
+![](https://i.imgur.com/TnPdmlR.png)
