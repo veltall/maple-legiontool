@@ -1,70 +1,72 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:convert';
 import 'package:legionprovider/models/character_model.dart';
+import 'package:legionprovider/providers/legion_provider.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  List _characters = [];
-  var _legionLevel = 0;
-
+class _HomePageState extends ConsumerState<HomePage> {
   Future<void> readJson() async {
     final String response =
         await rootBundle.loadString('assets/character.json');
     final data = await json.decode(response);
-    var levels = 0;
-    for (var item in data) {
-      levels += item["level"] as int;
-    }
+
     setState(() {
-      _characters = data;
-      _legionLevel = levels;
+      ref.read(characterListProvider.state).state = [...data];
     });
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
     readJson();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final charList = ref.watch(filteredCharacterListProvider);
+    final legionLevel = ref.watch(legionLevelProvider);
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Legion Level: " + _legionLevel.toString(),
+          "Legion Level: " + legionLevel.toString(),
           style: Theme.of(context).textTheme.headline5!.copyWith(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
               ),
         ),
       ),
-      body: _characters.isEmpty
+      body: charList.isEmpty
           ? const RefreshProgressIndicator(
               value: null,
             )
           : ListView.builder(
-              itemCount: _characters.length,
+              itemCount: charList.length,
               itemBuilder: (context, index) {
-                final Map<String, dynamic> c = _characters[index];
+                final Map<String, dynamic> c = charList[index];
                 return Column(
                   children: [
                     CharacterCard(char: Character.fromMap(c)),
-                    if (index < _characters.length - 1)
-                      const Divider(height: 2),
+                    if (index < charList.length - 1) const Divider(height: 2),
                   ],
                 );
               },
             ),
       backgroundColor: Colors.grey[200],
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
         child: Icon(
           Icons.local_fire_department,
-          color: Theme.of(context).cardColor,
+          color: Theme.of(context).colorScheme.primary,
         ),
-        onPressed: () {},
+        onPressed: initState,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       extendBody: true,
@@ -75,14 +77,16 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed('/filter');
+              },
               icon: const Icon(Icons.search),
-              color: Theme.of(context).secondaryHeaderColor,
+              color: Colors.white,
             ),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.menu),
-              color: Theme.of(context).secondaryHeaderColor,
+              color: Colors.white,
             ),
           ],
         ),

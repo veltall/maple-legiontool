@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:legionprovider/screens/filter_selection_screen.dart';
 import 'screens/homepage_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,13 +16,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Legion Provider',
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
+        primarySwatch: Colors.deepPurple,
         primaryColor: Colors.white,
         dividerColor: Colors.grey.shade300,
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      routes: {
+        '/': (context) => const HomePage(),
+        '/filter': (context) => const FilterSelectionPage(),
+      },
+      initialRoute: '/',
     );
   }
 }
