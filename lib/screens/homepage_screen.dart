@@ -1,9 +1,12 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:convert';
 import 'package:legionprovider/models/character_model.dart';
 import 'package:legionprovider/providers/legion_provider.dart';
+import 'filter_selection_screen.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -80,7 +83,7 @@ class _HomePageState extends ConsumerState<HomePage> {
               onPressed: () {
                 Navigator.of(context).pushNamed('/filter');
               },
-              icon: const Icon(Icons.search),
+              icon: const Icon(Icons.filter_alt),
               color: Colors.white,
             ),
             IconButton(
